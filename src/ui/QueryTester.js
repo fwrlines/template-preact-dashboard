@@ -17,7 +17,7 @@ const QueryTester = ({ props }) => {
   return (
     <>
       <Helmet>
-        <title>Preact SSR Example with GraphQl</title>
+        <title>Preact Dashboard Example with GraphQl</title>
         <link
           rel="canonical"
           href="http://mysite.com/example"

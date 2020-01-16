@@ -1,7 +1,7 @@
 import { h, Fragment } from 'preact'
 import { useState } from 'preact/hooks'
-import Clock from 'components/AsyncClock'
-import QueryTester from 'components/QueryTester'
+import Clock from 'ui/AsyncClock'
+import QueryTester from 'ui/QueryTester'
 import { AnimatedVCaret } from '@fwrlines/ds'
 
 const App = () => {
