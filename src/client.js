@@ -12,7 +12,9 @@ import App from 'site/App'
 
 import '@fwrlines/alphabet-scss/main.scss'
 
-const client = getClient(process.env.GRAPHQL_ENDPOINT)
+const endpoint = process.env.GRAPHQL_ENDPOINT
+console.log('Ready to connect to', endpoint)
+const client = getClient(endpoint)
 
 const rootElement = document.getElementById('main')
 

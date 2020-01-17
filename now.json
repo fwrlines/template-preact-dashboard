@@ -1,11 +1,20 @@
 {
   "regions":["bru"],
-  "build":{
     "env": {
       "GRAPHQL_ENDPOINT":"https://api.fwrlines.com/graphql"
     }
-  },
   "env":{
     "BACKEND":"true"
   }
+  "headers": [
+    {
+      "source": "/.*",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "max-age=3600, s-maxage=3600, stale-while-revalidate"
+        }
+      ]
+    },
+  ]
 }
