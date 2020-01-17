@@ -2,7 +2,11 @@ import { h, Fragment } from 'preact'
 import { useState } from 'preact/hooks'
 import Clock from 'ui/AsyncClock'
 import QueryTester from 'ui/QueryTester'
-import { AnimatedVCaret } from '@fwrlines/ds'
+import Misc from 'ui/MiscTester'
+import {
+  AnimatedVCaret,
+  oAuth2LoginButton as LoginButton
+} from '@fwrlines/ds'
 
 const App = () => {
   const [active, setActive] = useState(false)
@@ -33,6 +37,7 @@ Includes
         thing="thing"
         thing2="thing2"
       />
+      <Misc />
       <QueryTester />
     </>
   )

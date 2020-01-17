@@ -2,37 +2,10 @@
   "regions":["bru"],
   "build":{
     "env": {
-      "GRAPHQL_ENDPOINT":"https://s.meccamico.com/graphql"
+      "GRAPHQL_ENDPOINT":"https://api.fwrlines.com/graphql"
     }
   },
   "env":{
     "BACKEND":"true"
-  },
-	"routes":[
-    {
-       "src": "/sitemap.xml",
-       "dest": "api/sitemap.js",
-       "headers": {
-       "cache-control": "s-maxage=1800, max-age=1800"
-      }
-    },
-    {
-      "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
-      "dest": "/$fn.$ext",
-      "headers": {
-        "cache-control": "s-maxage=86400, max-age=604800"
-       }
-    },
-    {
-		  "src":"/(?<fn>[A-Za-z0-9~.-\/]+).(?<ext>(js|css))",
-			"dest": "/$fn.$ext",
-			"headers": {
-			  "cache-control": "s-maxage=86400, max-age=604800"
-       }
-    },
-  	{
-      "src": "/.*",
-      "dest": "api/renderer.js"           
-  	}
-  ]  
+  }
 }
