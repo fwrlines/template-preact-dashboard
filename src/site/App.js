@@ -1,4 +1,7 @@
 import { h, Fragment } from 'preact'
+//import Prototypes from 'prototypes' //Capitalize, etc
+import { Switch, Route } from 'react-router-dom'
+import oAuth2Routes from './oauth2/routes'
 import { useState } from 'preact/hooks'
 import Clock from 'ui/AsyncClock'
 import QueryTester from 'ui/QueryTester'
@@ -12,6 +15,9 @@ const App = () => {
   const [active, setActive] = useState(false)
   return (
     <>
+      <Switch>
+        <oAuth2Routes />
+      </Switch>
       <h1>Preact test</h1>
       <h2>
 Includes

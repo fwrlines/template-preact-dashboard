@@ -1,3 +1,5 @@
+export { default as OAUTH2 } from './oauth2/urls'
+
 export const STATIC={
   HOME       :'',
   ANOTHERPAGE:'longer/url/for/sitemap'
