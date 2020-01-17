@@ -23,23 +23,14 @@
     {
       "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
       "dest": "/$fn.$ext",
-      "headers": {
-        "cache-control": "s-maxage=86400, max-age=604800, stale-while-revalidate"
-       }
     },
     {
 		  "src":"/(?<fn>[A-Za-z0-9~.-\/]+).(?<ext>(js|css))",
 			"dest": "/$fn.$ext",
-			"headers": {
-			  "cache-control": "s-maxage=86400, max-age=604800, stale-while-revalidate"
-       }
     },
   	{
       "src": "/.*",
       "dest": "index.html",
-			"headers": {
-			  "cache-control": "s-maxage=7200, max-age=86400, stale-while-revalidate"
-       }
   	}
   ],
 }
