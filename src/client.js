@@ -1,4 +1,4 @@
-import { h, render, hydrate } from 'preact'
+import { h, render } from 'preact'
 
 import { ApolloProvider } from '@apollo/react-hooks'
 import { getClient } from 'graphql/getClient'
@@ -31,20 +31,9 @@ const jsx = (
 /* When main pagedelivered by SSR, not sure why, js is loaded twice for Loadable components
   console.log(rootElement.hasChildNodes(), rootElement.innerHTML) */
 
-loadableReady(() => {
-  if (rootElement.hasChildNodes()) {
-    hydrate(
+ render(
       jsx,
       rootElement)
-  }
-  else {
-    render(
-      jsx,
-      rootElement)
-  }
-
-
-})
 
 if (module.hot) {
   module.hot.accept()
