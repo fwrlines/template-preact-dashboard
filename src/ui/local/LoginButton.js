@@ -6,6 +6,8 @@ import {
   oAuth2LoginButton as LoginButton
 } from '@fwrlines/ds'
 
+//export default () => <h2>Wks</h2>
+
 export default ({ props }) => (
   <LoginButton
     label="Login with google"

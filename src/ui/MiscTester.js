@@ -6,5 +6,6 @@ export default ({ props }) => (
   <>
     <h3>Login button underneath</h3>
     <LoginButton />
+    <p>On top here</p>
   </>
 )

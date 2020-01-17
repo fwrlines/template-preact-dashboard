@@ -2,24 +2,20 @@
   "regions":["bru"],
   "build":{
     "env": {
-      "GRAPHQL_ENDPOINT":"https://api.fwrlines.com/graphql"
+      "GRAPHQL_ENDPOINT":"https://s.meccamico.com/graphql"
     }
   },
   "env":{
     "BACKEND":"true"
-  }
-  "headers": [
+  },
+	"routes":[
     {
-      "source": "/.*",
-      "headers" : [
-        {
-          "key" : "Cache-Control",
-          "value" : "max-age=3600, s-maxage=3600, stale-while-revalidate"
-        }
-      ]
+       "src": "/sitemap.xml",
+       "dest": "api/sitemap.js",
+       "headers": {
+       "cache-control": "s-maxage=1800, max-age=1800"
+      }
     },
-  ],
-  "routes": [
     {
       "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
       "dest": "/$fn.$ext",
@@ -36,10 +32,10 @@
     },
   	{
       "src": "/.*",
-      "dest": "index.html",
+      "dest": "api/renderer.js",
 			"headers": {
 			  "cache-control": "s-maxage=7200, max-age=86400, stale-while-revalidate"
        }
   	}
-  ],
+  ]  
 }

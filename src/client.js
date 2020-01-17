@@ -12,9 +12,7 @@ import App from 'site/App'
 
 import '@fwrlines/alphabet-scss/main.scss'
 
-const endpoint = process.env.GRAPHQL_ENDPOINT
-console.log('Ready to connect to', endpoint)
-const client = getClient(endpoint)
+const client = getClient(process.env.GRAPHQL_ENDPOINT)
 
 const rootElement = document.getElementById('main')
 
@@ -31,9 +29,9 @@ const jsx = (
 /* When main pagedelivered by SSR, not sure why, js is loaded twice for Loadable components
   console.log(rootElement.hasChildNodes(), rootElement.innerHTML) */
 
- render(
-      jsx,
-      rootElement)
+render(
+  jsx,
+  rootElement)
 
 if (module.hot) {
   module.hot.accept()
