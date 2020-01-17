@@ -7,30 +7,28 @@
   },
   "env":{
     "BACKEND":"true"
-  }
-  "headers": [
+  },
+  "routes": [
     {
-      "source": "/.*",
-      "headers" : [
-        {
-          "key" : "Cache-Control",
-          "value" : "max-age=3600, s-maxage=3600, stale-while-revalidate"
-        }
-      ]
-    },
-  ],
-  "rewrites": [
-    {
-      "source": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
-      "destination": "/$fn.$ext",
+      "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
+      "dest": "/$fn.$ext",
+      "headers": {
+        "cache-control": "s-maxage=86400, max-age=604800, stale-while-revalidate"
+       }
     },
     {
-		  "source":"/(?<fn>[A-Za-z0-9~.-\/]+).(?<ext>(js|css))",
-			"destination": "/$fn.$ext",
+		  "src":"/(?<fn>[A-Za-z0-9~.-\/]+).(?<ext>(js|css))",
+			"dest": "/$fn.$ext",
+      "headers": {
+        "cache-control": "s-maxage=86400, max-age=604800, stale-while-revalidate"
+       }
     },
   	{
-      "source": "/.*",
-      "destination": "/public/index.html",
+      "src": "/.*",
+      "dest": "/index.html",
+      "headers": {
+        "cache-control": "s-maxage=86400, max-age=604800, stale-while-revalidate"
+       }
   	}
-  ],
+  ]
 }

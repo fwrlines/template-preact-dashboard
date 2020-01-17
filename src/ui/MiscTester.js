@@ -1,4 +1,4 @@
-import { h, Fragment, Component } from 'preact'
+import { h, Fragment } from 'preact'
 
 import { LoginButton } from 'ui/local'
 
