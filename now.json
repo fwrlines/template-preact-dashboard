@@ -19,18 +19,18 @@
       ]
     },
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
-      "dest": "/$fn.$ext",
+      "source": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
+      "destination": "/$fn.$ext",
     },
     {
-		  "src":"/(?<fn>[A-Za-z0-9~.-\/]+).(?<ext>(js|css))",
-			"dest": "/$fn.$ext",
+		  "source":"/(?<fn>[A-Za-z0-9~.-\/]+).(?<ext>(js|css))",
+			"destination": "/$fn.$ext",
     },
   	{
-      "src": "/.*",
-      "dest": "index.html",
+      "source": "/.*",
+      "destination": "/public/index.html",
   	}
   ],
 }
