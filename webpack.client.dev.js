@@ -35,7 +35,7 @@ module.exports = {
     filename     :'[id].js?[hash:8]',
     libraryTarget:'umd'
   },
-  devtool  :'cheap-module-eval-source-map',
+  devtool  :'source-map',
   devServer:{
     contentBase:[
       path.resolve(__dirname, './public'),

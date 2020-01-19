@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import React from 'react'
 
 class Clock extends Component {
   state = { time: Date.now() };

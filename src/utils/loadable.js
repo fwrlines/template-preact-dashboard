@@ -1,5 +1,4 @@
-//import React from 'react'
-import { h } from 'preact'
+import React from 'react'
 import baseLoadable from '@loadable/component'
 import Loading from 'site/Loading'
 

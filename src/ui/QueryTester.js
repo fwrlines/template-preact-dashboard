@@ -1,4 +1,4 @@
-import { h, Fragment } from 'preact'
+import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { Helmet } from 'react-helmet'
 import gql from 'graphql-tag'

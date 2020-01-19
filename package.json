@@ -1,5 +1,5 @@
 {
-  "name": "template-preact-ssr",
+  "name": "template-react-dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "public/main.js",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fwrlines/template-preact-ssr.git"
+    "url": "git+https://github.com/fwrlines/template-react-dashboard.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fwrlines/template-preact-ssr/issues"
+    "url": "https://github.com/fwrlines/template-react-dashboard/issues"
   },
-  "homepage": "https://github.com/fwrlines/template-preact-ssr#readme",
+  "homepage": "https://github.com/fwrlines/template-react-dashboard#readme",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
     "@fwrlines/alphabet-scss": "latest",
@@ -47,15 +47,17 @@
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "module-alias": "^2.2.2",
-    "preact": "^10.1.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
+    "@babel/core": "^7.8.3",
     "@babel/node": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.8.3",
     "@loadable/babel-plugin": "^5.11.0",
     "@loadable/webpack-plugin": "^5.7.1",
     "babel-eslint": "^10.0.3",

@@ -1,4 +1,5 @@
-import { h, render } from 'preact'
+import React from 'react'
+import { render } from 'react-dom'
 
 import { ApolloProvider } from '@apollo/react-hooks'
 import { getClient } from 'graphql/getClient'
@@ -35,5 +36,4 @@ render(
 
 if (module.hot) {
   module.hot.accept()
-  require('preact/debug')
 }
