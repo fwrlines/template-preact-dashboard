@@ -41,7 +41,6 @@ const App = () => {
       { loading && 'LOADING' }
       { error && 'ERROR' }
       { data && data.oAuth2Google }
-      <LoginButton />
       <h1>Preact test</h1>
       <h2>
 Includes
