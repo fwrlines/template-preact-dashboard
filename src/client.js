@@ -5,7 +5,6 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { getClient } from 'graphql/getClient'
 import { BrowserRouter } from 'react-router-dom'
 
-import { loadableReady } from '@loadable/component'
 
 import App from 'site/App'
 //import Clock from 'components/Clock'
