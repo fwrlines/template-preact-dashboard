@@ -1,31 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 //import Prototypes from 'prototypes' //Capitalize, etc
 import { Switch, Route, Link } from 'react-router-dom'
 import oAuth2Routes from './oauth2/routes'
-import { useState } from 'preact/hooks'
 import Clock from 'ui/AsyncClock'
 import QueryTester from 'ui/QueryTester'
 import Misc from 'ui/MiscTester'
 import QUERY from 'ui/local/graphql/oAuth2Google.graphql'
-import { useQuery } from '@apollo/react-hooks'
-import gql from 'graphql-tag'
 import {
   AnimatedVCaret,
-  oAuth2LoginButton as LoginButton
+  OLoginButton
 } from '@fwrlines/ds'
 
 const App = () => {
   const [active, setActive] = useState(false)
-  const {
-    loading,
-    error,
-    data={}
-  } = useQuery(gql(QUERY))
   return (
     <>
       <Switch>
         <Route path="/about">
           <h1>About</h1>
+          <OLoginButton
+            query={QUERY}
+            label="Login with google"
+            dataKey="oAuth2Google"
+          />
         </Route>
         <Route path="/users">
           <h1>Users</h1>
@@ -38,10 +35,7 @@ const App = () => {
           <QueryTester />
         </Route>
       </Switch>
-      { loading && 'LOADING' }
-      { error && 'ERROR' }
-      { data && data.oAuth2Google }
-      <h1>Preact test</h1>
+      <h1>React test</h1>
       <h2>
 Includes
         <AnimatedVCaret

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { h } from 'preact'
 
 export default function Loading() {
 

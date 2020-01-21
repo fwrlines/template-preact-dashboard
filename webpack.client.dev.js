@@ -18,14 +18,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   resolve:{
+    // For npm link prototyping
     alias:{
-      'react'               :'preact/compat',
-      'react-dom/test-utils':'preact/test-utils',
-      'react-dom'           :'preact/compat'
-      // Must be below test-utils
+      'react'              :path.resolve('./node_modules/react'),
+      '@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
     }
   },
-
   entry:[
     './src/client.js'
   ],
@@ -44,7 +42,7 @@ module.exports = {
     ],
     watchContentBase  :true,
     historyApiFallback:true,
-    port              :3333,
+    port              :3344,
     host              :'0.0.0.0',
     hot               :true,
     liveReload        :false,
