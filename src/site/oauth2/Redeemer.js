@@ -1,5 +1,4 @@
-import { h, Fragment } from 'preact'
-
+import React from 'react'
 
 export default (props) => {
   console.log(props)
