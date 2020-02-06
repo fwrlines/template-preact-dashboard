@@ -8,8 +8,9 @@ import Misc from 'ui/MiscTester'
 import QUERY from 'ui/local/graphql/oAuth2Google.graphql'
 import {
   AnimatedVCaret,
-  OLoginButton
+  Label
 } from '@fwrlines/ds'
+import { LoginButton } from 'ui/local'
 
 const App = () => {
   const [active, setActive] = useState(false)
@@ -18,11 +19,6 @@ const App = () => {
       <Switch>
         <Route path="/about">
           <h1>About</h1>
-          <OLoginButton
-            query={QUERY}
-            label="Login with google"
-            dataKey="oAuth2Google"
-          />
         </Route>
         <Route path="/users">
           <h1>Users</h1>
@@ -35,7 +31,14 @@ const App = () => {
           <QueryTester />
         </Route>
       </Switch>
-      <h1>React test</h1>
+      <Label
+        className="x-red"
+        basic
+      >
+Under
+      </Label>
+      <LoginButton />
+      <h1>React test 4 toby</h1>
       <h2>
 Includes
         <AnimatedVCaret
