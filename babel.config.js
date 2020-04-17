@@ -1,6 +1,8 @@
 module.exports = function (api) {
   api.cache(false)
 
+  let isProd = api.cache(() => process.env.NODE_ENV === 'production')
+
   const presets = [
     [
       '@babel/preset-env',
@@ -32,10 +34,12 @@ module.exports = function (api) {
         ]
       }
     ],
-    'transform-react-remove-prop-types',
     '@loadable/babel-plugin'
   ]
 
+  isProd && plugins.push(
+    'transform-react-remove-prop-types',
+  )
 
   //['add-module-exports']
 
