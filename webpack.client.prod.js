@@ -80,7 +80,7 @@ module.exports = {
 
     new CopyPlugin([
       { from: './src/assets/fonts', to: './public' },
-      { from: './src/assets/images', to: './public' }
+      { from: './src/assets/images', to: './public' },
       { from: './node_modules/@fwrlines/ds/public', to: './public' }
     ]),
 
