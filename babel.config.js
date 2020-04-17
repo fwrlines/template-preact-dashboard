@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  api.cache(false)
+  //api.cache(false)
 
   let isProd = api.cache(() => process.env.NODE_ENV === 'production')
 
