@@ -1,6 +1,6 @@
 {
   "name": "template-react-dashboard",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "public/main.js",
   "engines": {
@@ -23,7 +23,7 @@
     "bd": "npm version patch && npm run deploy-commit",
     "test-eslint": "eslint src/client.js"
   },
-  "repository":{
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/fwrlines/template-react-dashboard.git"
   },
