@@ -67,6 +67,8 @@ module.exports = {
   mode:'production',
 
   optimization:{
+    usedExports:true,
+
     nodeEnv  :'production',
     minimize :true,
     minimizer:[
