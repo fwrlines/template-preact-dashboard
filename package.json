@@ -23,6 +23,7 @@
     "bd": "npm version patch && npm run deploy-commit",
     "test-eslint": "eslint src/client.js"
   },
+  "repository":{
     "type": "git",
     "url": "git+https://github.com/fwrlines/template-react-dashboard.git"
   },
