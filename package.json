@@ -17,6 +17,7 @@
     "cdcw": "npm run cdc -- -- --watch",
     "cps": "npm run client:prod:start",
     "cpc": "npm run client:prod:compile",
+    "xcpc": "npm run client:prod:compile",
     "cpcw": "npm run cpc -- -- --watch",
     "build": "npm run cpc",
     "deploy-commit": "git add . && git commit -m '[Auto] Compile and deploy from cli' && git push",
