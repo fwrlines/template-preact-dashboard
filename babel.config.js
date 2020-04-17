@@ -32,6 +32,7 @@ module.exports = function (api) {
         ]
       }
     ],
+    'transform-react-remove-prop-types',
     '@loadable/babel-plugin'
   ]
 
