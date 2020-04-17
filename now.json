@@ -11,7 +11,7 @@
   "routes": [
     {
       "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt))",
-      "dest": "/$fn.$ext",
+      "dest": "/public/$fn.$ext",
       "headers": {
         "cache-control": "s-maxage=1, max-age=1, stale-while-revalidate"
        }
