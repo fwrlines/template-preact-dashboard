@@ -39,7 +39,8 @@ module.exports = {
   output:{
     path         :path.resolve(__dirname, 'public/'),
     publicPath   :'/',
-    filename     :( '[id].js?[hash:8]' ),
+    filename     :( '[name].js?[hash:8]' ),
+    //filename     :( '[id].js?[hash:8]' ),
     libraryTarget:'umd'
   },
 
@@ -71,13 +72,12 @@ module.exports = {
     minimizer:[
       new TerserPlugin({})
     ],
-    runtimeChunk:'single'
+    runtimeChunk:'single',
 
-    /*
-    splitChunks :{
+    splitChunks:{
       chunks            :'all',
       maxInitialRequests:Infinity,
-      minSize           :0,
+      minSize           :10000,
       cacheGroups       :{
         vendor:{
           test:/[\\/]node_modules[\\/]/,
@@ -92,7 +92,6 @@ module.exports = {
         }
       }
     }
-    */
   },
 
   plugins:[
