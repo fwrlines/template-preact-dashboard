@@ -50,7 +50,8 @@ module.exports = {
       path.resolve(__dirname, './public'),
       path.resolve(__dirname, './src/assets/fonts'),
       path.resolve(__dirname, './src/assets/images'),
-      path.resolve(__dirname, './node_modules/@fwrlines/ds/public')
+      path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/fonts'),
+      path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/images')
     ],
     watchContentBase  :true,
     historyApiFallback:true,
@@ -70,7 +71,9 @@ module.exports = {
     minimizer:[
       new TerserPlugin({})
     ],
-    runtimeChunk:'single',
+    runtimeChunk:'single'
+
+    /*
     splitChunks :{
       chunks            :'all',
       maxInitialRequests:Infinity,
@@ -89,6 +92,7 @@ module.exports = {
         }
       }
     }
+    */
   },
 
   plugins:[
@@ -100,7 +104,8 @@ module.exports = {
     new CopyPlugin([
       { from: './src/assets/fonts', to: './public' },
       { from: './src/assets/images', to: './public' },
-      { from: './node_modules/@fwrlines/ds/public', to: './public' }
+      { from: './node_modules/@fwrlines/ds/src/assets/fonts', to: './public' },
+      { from: './node_modules/@fwrlines/ds/src/assets/images', to: './public' }
     ]),
 
 	 new MiniCssExtractPlugin({
