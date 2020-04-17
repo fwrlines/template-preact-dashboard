@@ -64,16 +64,19 @@ module.exports = {
     disableHostCheck  :true //rdp
   },
 
-  mode:'production',
+  mode:'development',
+  //mode:'production',
 
   optimization:{
     usedExports:true,
 
+    /*
     nodeEnv  :'production',
     minimize :true,
     minimizer:[
       new TerserPlugin({})
     ],
+    */
     runtimeChunk:'single',
 
     splitChunks:{
