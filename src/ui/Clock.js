@@ -19,7 +19,8 @@ class Clock extends Component {
 
   render() {
     let time = new Date(this.state.time).toLocaleTimeString()
-    return (<h1 class="x-secondary cx">
+    return (<h1 class="x-secondary c-x">
+      <em>new version</em>
       {time}
       {' '}
 local time

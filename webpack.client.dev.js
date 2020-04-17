@@ -38,7 +38,8 @@ module.exports = {
     contentBase:[
       path.resolve(__dirname, './public'),
       path.resolve(__dirname, './src/assets/fonts'),
-      path.resolve(__dirname, './src/assets/images')
+      path.resolve(__dirname, './src/assets/images'),
+      path.resolve(__dirname, './node_modules/@fwrlines/ds/public')
     ],
     watchContentBase  :true,
     historyApiFallback:true,

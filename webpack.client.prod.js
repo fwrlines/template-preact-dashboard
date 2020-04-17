@@ -27,8 +27,8 @@ module.exports = {
   resolve:{
     // For npm link prototyping
     alias:{
-      'react'              :path.resolve('./node_modules/react'),
-      '@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
+      //'react'              :path.resolve('./node_modules/react'), //NOT in use, for preact
+      //'@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
     }
   },
 
@@ -49,7 +49,8 @@ module.exports = {
     contentBase:[
       path.resolve(__dirname, './public'),
       path.resolve(__dirname, './src/assets/fonts'),
-      path.resolve(__dirname, './src/assets/images')
+      path.resolve(__dirname, './src/assets/images'),
+      path.resolve(__dirname, './node_modules/@fwrlines/ds/public')
     ],
     watchContentBase  :true,
     historyApiFallback:true,
@@ -80,6 +81,7 @@ module.exports = {
     new CopyPlugin([
       { from: './src/assets/fonts', to: './public' },
       { from: './src/assets/images', to: './public' }
+      { from: './node_modules/@fwrlines/ds/public', to: './public' }
     ]),
 
 	 new MiniCssExtractPlugin({
