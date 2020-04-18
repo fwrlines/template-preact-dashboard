@@ -47,8 +47,8 @@ module.exports = {
   output:{
     path         :path.resolve(__dirname, 'public/'),
     publicPath   :'/',
+    //filename     :( '[name].js?[chunkhash:5]' ),
     filename     :( '[name].js?[hash:8]' ),
-    //filename     :( '[id].js?[hash:8]' ),
     libraryTarget:'umd'
   },
 
@@ -144,7 +144,7 @@ module.exports = {
 
 	 new MiniCssExtractPlugin({
       //filename:'yabbi.css'
-      chunkFilename:'[contenthash:5].css'
+      chunkFilename:'[name].css?[contenthash:5]'
     }),
 
     /*new LodashModuleReplacementPlugin({
