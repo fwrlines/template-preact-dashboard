@@ -27,8 +27,8 @@ module.exports = {
   resolve:{
     // For npm link prototyping
     alias:{
-      //'react'              :path.resolve('./node_modules/react'), //NOT in use, for preact
-      //'@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
+      'react'              :path.resolve('./node_modules/react'), // to avoid using two copies of react
+      '@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
     }
   },
 
@@ -68,7 +68,7 @@ module.exports = {
   mode:'production',
 
   optimization:{
-    usedExports:true,
+    usedExports:false,
 
     nodeEnv  :'production',
     minimize :true,
@@ -110,10 +110,11 @@ module.exports = {
       { from: './node_modules/@fwrlines/ds/src/assets/images', to: './public' }
     ]),
 
+    /*
 	 new MiniCssExtractPlugin({
       filename     :'[contenthash:5].css',
       chunkFilename:'[contenthash:5].css'
-    }),
+    }),*/
 
     /*new LodashModuleReplacementPlugin({
       shorthands: true,
@@ -147,10 +148,25 @@ module.exports = {
       {
         test:/\.(scss|css)$/,
         use :[
+
+          /*
           {
             loader:MiniCssExtractPlugin.loader
+          },
+          */
+          {
+            loader :'file-loader',
+            options:{
+              name   :'[name]-build.css',
+              context:'./'
+            }
+          },
+          {
+            loader:'extract-loader'
           }, {
-            loader:'css-loader'
+            loader :'css-loader',
+            options:{
+            }
           }, {
             loader:'postcss-loader'
           }, {
