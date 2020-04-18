@@ -97,7 +97,7 @@ module.exports = {
         fwrlines:{
           chunks  :'all',
           priority:100,
-          test    :/[\\/]fwrlines\/ds\/dist[\\/]/,
+          test    :/fwrlines\/ds\/dist[\\/]/,
           name(module) {
             //const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
             const nameSplit = module.context.split('/')
