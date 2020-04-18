@@ -13,14 +13,14 @@
       "src": "/(?<fn>[A-Za-z0-9-\/]+).(?<ext>(png|jpg|woff|woff2|otf|eot|ttf|ico|svg|glb|xml|txt|html))",
       "dest": "/public/$fn.$ext",
       "headers": {
-        "cache-control": "s-maxage=604800, max-age=86400"
+        "cache-control": "s-maxage=604800, max-age=604800"
        }
     },
     {
 		  "src":"/(?<fn>[A-Za-z0-9-~._\/]+).(?<ext>(js|css))",
 			"dest": "/$fn.$ext",
       "headers": {
-        "cache-control": "s-maxage=604800, max-age=86400"
+        "cache-control": "s-maxage=604800, max-age=604800"
        }
     },
   	{
