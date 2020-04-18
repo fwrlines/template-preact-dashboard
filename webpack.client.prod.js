@@ -1,6 +1,14 @@
 const path = require('path')
 const webpack = require('webpack')
 
+function pascalToSnake(s){
+  return s
+    .replace(/(?:^|\.?)([A-Z])/g, (x,y) => '_' + y.toLowerCase())
+    //.replace(/(?:^|\?)([A-Z])/g, (x,y) => '_' + y.toLowerCase())
+    .replace(/^_/, '')
+}
+
+
 /* PLUGINS */
 
 
@@ -27,7 +35,7 @@ module.exports = {
   resolve:{
     // For npm link prototyping
     alias:{
-      'react'              :path.resolve('./node_modules/react'), // to avoid using two copies of react
+      'react'              :path.resolve('./node_modules/react'), //NOT in use, for preact
       '@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
     }
   },
@@ -64,12 +72,16 @@ module.exports = {
     disableHostCheck  :true //rdp
   },
 
-  //mode:'development',
+  stats:{
+    //maxModules:Infinity,
+    //exclude   :undefined
+    entrypoints:false,
+    children   :false
+  },
+
   mode:'production',
 
   optimization:{
-    usedExports:false,
-
     nodeEnv  :'production',
     minimize :true,
     minimizer:[
@@ -80,9 +92,29 @@ module.exports = {
     splitChunks:{
       chunks            :'all',
       maxInitialRequests:Infinity,
-      minSize           :10000,
+      minSize           :0,
       cacheGroups       :{
+        fwrlines:{
+          chunks  :'all',
+          priority:100,
+          test    :/[\\/]fwrlines\/ds\/dist[\\/]/,
+          name(module) {
+            //const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
+            const nameSplit = module.context.split('/')
+            //const componentName = pascalToSnake(nameSplit.slice(-1)[0])
+            const distIndex = nameSplit.indexOf('dist')
+            if ((nameSplit.length - 1) >= (distIndex +3)) {
+              const family = nameSplit[distIndex + 2]
+              const moduleName = nameSplit[distIndex +3 ]
+              return ['ds', family, pascalToSnake(moduleName)].join('.')
+            }
+            return 'ds.main'
+          }
+        },
+        
+
         vendor:{
+          //priority:-10,
           test:/[\\/]node_modules[\\/]/,
           name(module) {
             // get the name. E.g. node_modules/packageName/not/this/part.js
@@ -90,7 +122,7 @@ module.exports = {
             const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
 
             // npm package names are URL-safe, but some servers don't like @ symbols
-            return `m-${packageName.replace('@', '')}`
+            return `npm.${packageName.replace('@', '')}`
           }
         }
       }
@@ -110,11 +142,10 @@ module.exports = {
       { from: './node_modules/@fwrlines/ds/src/assets/images', to: './public' }
     ]),
 
-    /*
 	 new MiniCssExtractPlugin({
-      filename     :'[contenthash:5].css',
+      //filename:'yabbi.css'
       chunkFilename:'[contenthash:5].css'
-    }),*/
+    }),
 
     /*new LodashModuleReplacementPlugin({
       shorthands: true,
@@ -148,25 +179,10 @@ module.exports = {
       {
         test:/\.(scss|css)$/,
         use :[
-
-          /*
           {
             loader:MiniCssExtractPlugin.loader
-          },
-          */
-          {
-            loader :'file-loader',
-            options:{
-              name   :'[name]-build.css',
-              context:'./'
-            }
-          },
-          {
-            loader:'extract-loader'
           }, {
-            loader :'css-loader',
-            options:{
-            }
+            loader:'css-loader'
           }, {
             loader:'postcss-loader'
           }, {
