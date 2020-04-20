@@ -4,6 +4,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import oAuth2Routes from './oauth2/routes'
 import Clock from 'ui/AsyncClock'
 import QueryTester from 'ui/QueryTester'
+import Redeemer from 'ui/local/Redeemer'
 import Misc from 'ui/MiscTester'
 import QUERY from 'ui/local/graphql/oAuth2Google.graphql'
 import {
@@ -11,6 +12,7 @@ import {
   Label
 } from '@fwrlines/ds'
 import { LoginButton } from 'ui/local'
+//<Route path="/redeem/:redeem([0-9a-z-]{3,80})">
 
 const App = () => {
   const [active, setActive] = useState(false)
@@ -19,6 +21,10 @@ const App = () => {
       <Switch>
         <Route path="/about">
           <h1>About</h1>
+        </Route>
+        <Route path="/redeem/:code([0-9a-z-]{64})">
+          <h1>redeem</h1>
+          <Redeemer />
         </Route>
         <Route path="/users">
           <h1>Users</h1>
