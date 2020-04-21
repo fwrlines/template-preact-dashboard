@@ -35,6 +35,7 @@
   "homepage": "https://github.com/fwrlines/template-react-dashboard#readme",
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.43",
+    "@apollo/link-context": "^2.0.0-beta.3",
     "@apollo/link-retry": "^2.0.0-beta.3",
     "@fwrlines/alphabet-scss": "latest",
     "@fwrlines/ds": "latest",

@@ -20,8 +20,10 @@ module.exports = {
   resolve:{
     // For npm link prototyping
     alias:{
-      'react'              :path.resolve('./node_modules/react'),
-      '@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
+      'react'           :path.resolve('./node_modules/react'),
+      'react-router-dom':path.resolve('./node_modules/react-router-dom')
+      //'@apollo/client':path.resolve('./node_modules/@apollo/client')
+      //'@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
     }
   },
   entry:[

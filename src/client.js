@@ -1,12 +1,14 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-dom'
 
 import { ApolloProvider } from '@apollo/client'
 import { getClient } from 'graphql/getClient'
 import { BrowserRouter } from 'react-router-dom'
 
+import { ProfileContextProvider } from '@fwrlines/ds'
 
 import App from 'site/App'
+
 //import Clock from 'components/Clock'
 
 

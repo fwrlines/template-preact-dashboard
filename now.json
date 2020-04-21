@@ -6,7 +6,9 @@
     }
   },
   "env":{
-    "BACKEND":"true"
+    "SESSION_COOKIE_NAME":"session",
+    "BACKEND":"true",
+    "LOCAL":"false"
   },
   "routes": [
     {
