@@ -6,7 +6,6 @@
 + modular component library
 + includes apollo gql client lib
 + optimizations : terser minification, postcss reduction, css minification, es6 tree shaking, 
-+ uses preact rather than react
 
 ## Required context
 
