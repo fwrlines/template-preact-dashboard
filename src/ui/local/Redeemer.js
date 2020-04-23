@@ -13,7 +13,6 @@ import { ProfileContext } from '@fwrlines/ds'
 //export default () => <h2>Wks</h2>
 
 export default ({ props }) => {
-  //console.log('redeemer')
   const { code } = useParams()
 
   const history = useHistory()
@@ -27,8 +26,6 @@ export default ({ props }) => {
     }
   )
   
-  //console.log(8787897, loading, error, loginInfo)
-
   useEffect(() => {
     if (!called && code) doLogin()
   },
@@ -45,7 +42,7 @@ export default ({ props }) => {
       setSessionCookie(
         loginInfo.token,
         {
-          path  :'/', //make it accessible on all pages
+          //path  :'/', //make it accessible on all pages //Deprecated, now set up at the provider level
           //expires:
           maxAge:loginInfo.maxAge,
           //domain: //defaults on current domain
@@ -56,14 +53,11 @@ export default ({ props }) => {
 
       )
       history.push('/')
-      console.log('cookie set')
-      
     }
   },
   [loginInfo]
   )
   
-  //console.log('in this render..the cookie', sessionCookie)
 
 
   return (

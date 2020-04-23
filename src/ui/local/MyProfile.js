@@ -10,11 +10,12 @@ import { Link } from 'react-router-dom'
 export default ({ props }) => {
 
   const {
-    currentUserData,
+    currentUserData={},
+    currentUserLoading,
     logoutPath
   } = useContext(ProfileContext)
   
-  console.log('user', currentUserData)
+  console.log('EXE => Consumer, context is', currentUserData)
 
   return (
     <>

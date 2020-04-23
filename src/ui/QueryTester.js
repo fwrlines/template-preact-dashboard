@@ -11,7 +11,7 @@ const QueryTester = ({ props }) => {
     data={}
   }= useQuery(gql(INITIAL_DATA_QUERY))
 
-  console.log('data', data, error)
+  //console.log('data', data, error)
 
   if (loading) return <p>Loading ...</p>
   return (

@@ -13,7 +13,8 @@ import {
   Label,
   Logout,
   ProfileContext,
-  ProfileContextProvider
+  ProfileContextProvider,
+  PrivateRoute,
 } from '@fwrlines/ds'
 import { LoginButton } from 'ui/local'
 //<Route path="/redeem/:redeem([0-9a-z-]{3,80})">
@@ -21,9 +22,10 @@ import { LoginButton } from 'ui/local'
 import GQL_QUERY_ME from 'ui/local/graphql/me.graphql'
 
 const profileContextProps = {
+  cookieName:process.env.SESSION_COOKIE_NAME, //defaults to session insteqd
+  //cookiePath:'/' //Defaults to '/''
   loginPath :'/login',
   logoutPath:'/logout',
-  cookieName:process.env.SESSION_COOKIE_NAME,
   GQL_QUERY_ME
 }
 
@@ -59,9 +61,12 @@ const InsideApp = () => {
           <h1>redeem</h1>
           <Redeemer />
         </Route>
-        <Route path="/users">
-          <h1>Users</h1>
-        </Route>
+        <PrivateRoute 
+          path="/account"
+          component={
+            () => <h1>My Dashboard</h1>
+            }
+        />
         <Route path="/">
           <Clock
             thing="thing"
@@ -106,7 +111,7 @@ Includes
             <Link to={loginPath}>LOGIN</Link>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <Link to="/account">My account</Link>
           </li>
         </ul>
       </nav>
