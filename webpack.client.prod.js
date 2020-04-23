@@ -59,6 +59,7 @@ module.exports = {
       path.resolve(__dirname, './public'),
       path.resolve(__dirname, './src/assets/fonts'),
       path.resolve(__dirname, './src/assets/images'),
+      path.resolve(__dirname, './src/assets/favicon'),
       path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/fonts'),
       path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/images')
     ],
@@ -138,6 +139,7 @@ module.exports = {
     new CopyPlugin([
       { from: './src/assets/fonts', to: './public' },
       { from: './src/assets/images', to: './public' },
+      { from: './src/assets/favicon', to: './public' }, //https://www.favicon-generator.org/
       { from: './node_modules/@fwrlines/ds/src/assets/fonts', to: './public' },
       { from: './node_modules/@fwrlines/ds/src/assets/images', to: './public' }
     ]),
