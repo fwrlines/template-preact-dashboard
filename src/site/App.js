@@ -1,44 +1,22 @@
 import React, { useState, useContext } from 'react'
 //import Prototypes from 'prototypes' //Capitalize, etc
 import { Switch, Route, Link } from 'react-router-dom'
+
 import oAuth2Routes from './oauth2/routes'
 import Clock from 'ui/AsyncClock'
 import QueryTester from 'ui/QueryTester'
-import Redeemer from 'ui/local/Redeemer'
 import MyProfile from 'ui/local/MyProfile'
-import Misc from 'ui/MiscTester'
-import QUERY from 'ui/local/graphql/oAuth2Google.graphql'
+
 import {
   AnimatedVCaret,
-  Label,
-  Logout,
   ProfileContext,
   ProfileContextProvider,
-  PrivateRoute,
+  PrivateRoute
 } from '@fwrlines/ds'
-import { LoginButton } from 'ui/local'
-//<Route path="/redeem/:redeem([0-9a-z-]{3,80})">
-//
-import GQL_QUERY_ME from 'ui/local/graphql/me.graphql'
 
-const profileContextProps = {
-  cookieName:process.env.SESSION_COOKIE_NAME, //defaults to session insteqd
-  //cookiePath:'/' //Defaults to '/''
-  loginPath :'/login',
-  logoutPath:'/logout',
-  GQL_QUERY_ME
-}
+import routes from './allRoutes.js'
 
-const Wrapper = ({ children }) => (
-  <ProfileContextProvider
-    {...profileContextProps}
-  >
-    { children }
-  </ProfileContextProvider>
-)
-
-
-const InsideApp = () => {
+const App = () => {
   const [active, setActive] = useState(false)
 
   const {
@@ -51,22 +29,11 @@ const InsideApp = () => {
     
       <MyProfile />
       <Switch>
-        <Route path={logoutPath}>
-          <Logout />
-        </Route>
-        <Route path={loginPath}>
-          <LoginButton />
-        </Route>
-        <Route path="/redeem/:code([0-9a-z-]{64})">
-          <h1>redeem</h1>
-          <Redeemer />
-        </Route>
-        <PrivateRoute 
-          path="/account"
-          component={
-            () => <h1>My Dashboard</h1>
-            }
-        />
+        { routes.map(({ isPrivate, ...routeProps }, i) =>
+          isPrivate ?
+            <Route {...routeProps} /> :
+            <PrivateRoute {...routeProps} />
+        ) }
         <Route path="/">
           <Clock
             thing="thing"
@@ -75,33 +42,13 @@ const InsideApp = () => {
           <QueryTester />
         </Route>
       </Switch>
-      <Label
-        className="x-red"
-        basic
-      >
-Under
-      </Label>
-      <h1>React test 4 toby</h1>
-      <h2>
 Includes
-        <AnimatedVCaret
-          active={active}
-          setActive={setActive}
-          id="myarrow"
-          width="200px"
-        />
-      </h2>
-      <ul>
-        <li>
-        SSR
-        </li>
-        <li>
-        Lighthouse 100/100 ootb
-        </li>
-        <li>
-        Apollo
-        </li>
-      </ul>
+      <AnimatedVCaret
+        active={active}
+        setActive={setActive}
+        id="myarrow"
+        width="200px"
+      />
       <nav>
         <ul>
           <li>
@@ -119,4 +66,4 @@ Includes
   )
 }
 
-export default () => <Wrapper><InsideApp /></Wrapper>
+export default App

@@ -1,13 +1,10 @@
-export { default as OAUTH2 } from './oauth2/urls'
-
-export const STATIC={
+const STATIC={
   HOME       :'',
   ANOTHERPAGE:'longer/url/for/sitemap'
 }
 
 
-/* export { default as BLOG } from './blog/urls'
-   export { default as FORM } from './form/urls'
-   export { default as GUIDES } from './guides/urls'
-   export { default as LANDING } from './landing/urls'
-   export { default as STATIC } from './static/urls' */
+export { URLS as DASHBOARD_MAIN } from './dashboardMain'
+export { URLS as OAUTH2 } from './oauth2'
+export { STATIC }
+//export { URLS as STATIC } from './static/urls'
