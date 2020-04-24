@@ -2,6 +2,9 @@
 
 public/
 /public
+**/.yo-repository
+*/.yo-repository
+.yo-repository
 
 # Logs
 logs

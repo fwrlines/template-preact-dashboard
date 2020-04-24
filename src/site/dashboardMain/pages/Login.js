@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { LoginButton } from 'ui/local'
+import { LoginButton } from 'ui/local/oauth2'
 
 export default () => (
   <>

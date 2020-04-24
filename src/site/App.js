@@ -3,14 +3,13 @@ import React, { useState, useContext } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 
 import oAuth2Routes from './oauth2/routes'
-import Clock from 'ui/AsyncClock'
-import QueryTester from 'ui/QueryTester'
-import MyProfile from 'ui/local/MyProfile'
+import Clock from 'ui/test/AsyncClock'
+import QueryTester from 'ui/test/QueryTester'
+import { MyProfile } from 'ui/local/dashboardMain'
 
 import {
   AnimatedVCaret,
   ProfileContext,
-  ProfileContextProvider,
   PrivateRoute
 } from '@fwrlines/ds'
 
@@ -28,20 +27,34 @@ const App = () => {
     <>
     
       <MyProfile />
-      <Switch>
-        { routes.map(({ isPrivate, ...routeProps }, i) =>
-          isPrivate ?
-            <Route {...routeProps} /> :
-            <PrivateRoute {...routeProps} />
-        ) }
-        <Route path="/">
-          <Clock
-            thing="thing"
-            thing2="thing2"
-          />
-          <QueryTester />
-        </Route>
-      </Switch>
+      <Switch
+        children={
+          [
+            ...routes.map(({ isPrivate, ...routeProps }, i) =>
+              isPrivate ?
+                <PrivateRoute
+                  key={i}
+                  {...routeProps}
+                /> :
+                <Route
+                  key={i}
+                  {...routeProps}
+                />
+            ),
+            <Route path="/">
+              {' '}
+              <Clock
+                thing="thing"
+                thing2="thing2"
+              />
+              {' '}
+              <QueryTester />
+              {' '}
+            </Route>
+          
+          ]
+        }
+      />
 Includes
       <AnimatedVCaret
         active={active}
@@ -58,7 +71,7 @@ Includes
             <Link to={loginPath}>LOGIN</Link>
           </li>
           <li>
-            <Link to="/account">My account</Link>
+            <Link to="/d/profile">My account</Link>
           </li>
         </ul>
       </nav>

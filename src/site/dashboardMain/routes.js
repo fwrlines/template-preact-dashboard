@@ -1,6 +1,7 @@
 import { urljoin as _u, loadable } from 'utils'
 
 import { Logout } from '@fwrlines/ds'
+import { Login } from './pages/Login'
 
 import MODULE_URLS from './urls'
 

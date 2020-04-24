@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import GQL_QUERY_ME from 'ui/local/graphql/me.graphql'
 
-import { ProfileContextProvider } from '@fwrlines/ds'
+import { SiteContextProvider, ProfileContextProvider } from '@fwrlines/ds'
 
 import App from './App'
 
@@ -20,16 +20,25 @@ const profileContextProps = {
   GQL_QUERY_ME
 }
 
+const siteContextConfig={
+  SITE_NAME     :'Internet 1999',
+  SITE_CANONICAL:'https://internet1999.org',
+  FACEBOOK      :'facebook_id',
+  INSTAGRAM     :'@superaccount'
+}
+
 export default (
   <ApolloProvider
     client={client}
   >
     <BrowserRouter>
-      <ProfileContextProvider
-        {...profileContextProps}
-      >
-	    <App />
-      </ProfileContextProvider>
+      <SiteContextProvider config={siteContextConfig}>
+        <ProfileContextProvider
+          {...profileContextProps}
+        >
+	        <App />
+        </ProfileContextProvider>
+      </SiteContextProvider>
     </BrowserRouter>
   </ApolloProvider>
 )

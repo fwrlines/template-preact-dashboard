@@ -1,5 +1,8 @@
+/* @fwrlines/generator-react-component 1.5.0 */
 import * as React from 'react'
 import { useEffect, useContext } from 'react'
+
+//import PropTypes from 'prop-types'
 
 import { useParams, useHistory } from 'react-router-dom'
 
@@ -10,9 +13,11 @@ import QUERY from './graphql/oAuth2Login.graphql'
 
 import { ProfileContext } from '@fwrlines/ds'
 
-//export default () => <h2>Wks</h2>
-
-export default ({ props }) => {
+/**
+ * Use `Redeemer` to exchange an authorization code for a login token
+ *
+ */
+const Redeemer = (props) => {
   const { code } = useParams()
 
   const history = useHistory()
@@ -29,11 +34,11 @@ export default ({ props }) => {
   useEffect(() => {
     if (!called && code) doLogin()
   },
-  [called, code]
+  [called, code, doLogin]
   )
 
   const {
-    sessionCookie,
+    //sessionCookie,
     setSessionCookie
   } = useContext(ProfileContext)
 
@@ -48,16 +53,13 @@ export default ({ props }) => {
           //domain: //defaults on current domain
           secure:!(process.env.LOCAL === 'true')
           //sameSite:'strict'
-
         }
-
       )
       history.push('/')
     }
   },
-  [loginInfo]
+  [history, setSessionCookie, loginInfo]
   )
-  
 
 
   return (
@@ -70,3 +72,18 @@ export default ({ props }) => {
 
   )
 }
+
+/*
+Redeemer.propTypes = {
+}
+*/
+
+/*
+Redeemer.defaultProps = {
+  status: 'neutral',
+  //height:'2.2em',
+  //as:'p',
+}
+*/
+
+export default Redeemer
