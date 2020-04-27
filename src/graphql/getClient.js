@@ -28,6 +28,7 @@ function getLink(endpoint) {
     const cookies = new Cookies()
     //console.log('🔑', process.env.COOKIE_NAME)
     const token = cookies.get(process.env.SESSION_COOKIE_NAME)
+    console.log('Getting link', cookies)
     //console.log(987987, headers, token, cookies)
     if (token){
       return {

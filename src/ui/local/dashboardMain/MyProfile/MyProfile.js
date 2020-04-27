@@ -28,10 +28,8 @@ const MyProfile = ({
     currentUserLoading,
     logoutPath
   } = useContext(ProfileContext)
-
-  const context  = useContext(ProfileContext)
   
-  console.log('EXE => Consumer, context is',  context)
+  console.log('EXE => Consumer, context is', currentUserData)
 
   return (
     <>

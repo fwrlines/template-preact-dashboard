@@ -2,11 +2,11 @@
   "regions":["bru"],
   "build":{
     "env": {
-      "GRAPHQL_ENDPOINT":"https://api.fwrlines.com/graphql"
+      "GRAPHQL_ENDPOINT":"https://api.fwrlines.com/graphql",
+      "SESSION_COOKIE_NAME":"session"
     }
   },
   "env":{
-    "SESSION_COOKIE_NAME":"session",
     "BACKEND":"true",
     "LOCAL":"false"
   },
