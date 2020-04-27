@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/client'
 import { getClient } from 'graphql/getClient'
 import { BrowserRouter } from 'react-router-dom'
 
-import GQL_QUERY_ME from 'ui/local/graphql/me.graphql'
+import GQL_QUERY_ME from 'ui/local/dashboardMain/MyProfile/graphql/me.graphql'
 
 import { SiteContextProvider, ProfileContextProvider } from '@fwrlines/ds'
 
