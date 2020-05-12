@@ -1,60 +1,43 @@
 import React, { useState, useContext } from 'react'
 //import Prototypes from 'prototypes' //Capitalize, etc
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Redirect, Route, Link } from 'react-router-dom'
 
-import oAuth2Routes from './oauth2/routes'
-import Clock from 'ui/test/AsyncClock'
-import QueryTester from 'ui/test/QueryTester'
-import { MyProfile } from 'ui/local/dashboardMain'
+//import oAuth2Routes from './oauth2/routes'
+//import Clock from 'ui/test/AsyncClock'
+//import QueryTester from 'ui/test/QueryTester'
+//import { MyProfile } from 'ui/local/dashboardMain'
 
 import {
   AnimatedVCaret,
-  ProfileContext,
-  PrivateRoute
+  SessionContext,
+  SwitchRouteMap
 } from '@fwrlines/ds'
+
 
 import routes from './allRoutes.js'
 
 const App = () => {
-  const [active, setActive] = useState(false)
+  //const [active, setActive] = useState(false)
 
   const {
     loginPath,
     logoutPath
-  } = useContext(ProfileContext)
+  } = useContext(SessionContext)
 
   return (
     <>
-    
+      <SwitchRouteMap
+        routes={routes}
+        NotFound={<Redirect to={loginPath} />}
+      />
+      {/*}
       <MyProfile />
-      <Switch
-        children={
-          [
-            ...routes.map(({ isPrivate, ...routeProps }, i) =>
-              isPrivate ?
-                <PrivateRoute
-                  key={i}
-                  {...routeProps}
-                /> :
-                <Route
-                  key={i}
-                  {...routeProps}
-                />
-            ),
-            <Route path="/">
-              {' '}
               <Clock
                 thing="thing"
                 thing2="thing2"
               />
               {' '}
               <QueryTester />
-              {' '}
-            </Route>
-          
-          ]
-        }
-      />
 Includes
       <AnimatedVCaret
         active={active}
@@ -75,6 +58,7 @@ Includes
           </li>
         </ul>
       </nav>
+      */}
     </>
   )
 }

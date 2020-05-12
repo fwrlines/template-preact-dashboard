@@ -1,7 +1,7 @@
-import { routes as dashboardMainRoutes } from './dashboardMain'
-import { routes as oAuth2Routes } from './oauth2'
+import { routes as authRoutes } from './auth'
+import { routes as dashboardRoutes } from './dashboard'
 
 export default [
-  ...dashboardMainRoutes,
-  ...oAuth2Routes
+  ...dashboardRoutes,
+  ...authRoutes
 ]

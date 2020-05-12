@@ -48,6 +48,7 @@
     "react-cookie": "^4.0.3",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
+    "react-intl": "^4.5.3",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
@@ -63,6 +64,8 @@
     "babel-plugin-inline-dotenv": "^1.5.0",
     "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-react-intl": "^7.5.7",
+    "babel-plugin-react-intl-extractor": "^1.0.8",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.5.2",
@@ -70,6 +73,7 @@
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-synacor": "^3.0.5",
+    "eslint-plugin-formatjs": "^2.2.5",
     "eslint-plugin-react-hooks": "^3.0.0",
     "extract-loader": "^5.0.1",
     "file-loader": "^6.0.0",

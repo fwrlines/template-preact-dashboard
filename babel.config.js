@@ -10,9 +10,9 @@ module.exports = function (api) {
       {
         targets:{
           esmodules:true
-        }
+        },
+        debug:true
       }
-      //debug:true
     ],
     '@babel/preset-react'
   ]
@@ -32,6 +32,25 @@ module.exports = function (api) {
           '.graphql',
           '.gql'
         ]
+      }
+    ],
+    [
+      'react-intl',
+      {
+        messagesDir:'./src/translations/messages'
+      }
+    ],
+    [
+      'react-intl-extractor',
+      {
+        extractedFile:'./src/translations/aggregated.json',
+        langFiles    :[{
+          path              :'./src/translations/it.json',
+          cleanUpNewMessages:true
+        }, {
+          path              :'./src/translations/en.json',
+          cleanUpNewMessages:false
+        }]
       }
     ],
     '@loadable/babel-plugin'

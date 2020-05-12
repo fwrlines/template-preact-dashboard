@@ -1,0 +1,23 @@
+query {
+  me {
+    id
+    username
+    email
+    first_name
+    last_name
+    is_active
+    ts_created
+    ts_updated
+    oauth2 {
+      id
+      ts_created
+      ts_updated
+      picture
+      provider
+      locale
+      name
+      email
+      email_verified
+    }
+  }
+}

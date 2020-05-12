@@ -18,6 +18,7 @@ module.exports = {
   ],
   'plugins': [
     'react-hooks',
+    'formatjs'
   ],
   'parser': 'babel-eslint',
   'rules':{
