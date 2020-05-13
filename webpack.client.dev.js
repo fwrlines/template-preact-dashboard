@@ -21,6 +21,8 @@ module.exports = {
     // For npm link prototyping
     alias:{
       'react'           :path.resolve('./node_modules/react'),
+      'react-dom'       :path.resolve('./node_modules/react-dom'),
+      'react-intl'      :path.resolve('./node_modules/react-intl'),
       'react-router-dom':path.resolve('./node_modules/react-router-dom')
       //'@apollo/client':path.resolve('./node_modules/@apollo/client')
       //'@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
@@ -43,7 +45,7 @@ module.exports = {
       path.resolve(__dirname, './src/assets/images'),
       path.resolve(__dirname, './src/assets/favicon'),
       path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/fonts'),
-      path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/images'),
+      path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/images')
     ],
     watchContentBase  :true,
     historyApiFallback:true,
@@ -54,6 +56,11 @@ module.exports = {
     clientLogLevel    :'debug',
     disableHostCheck  :true //rdp
   },
+
+  watchOptions:{
+    ignored:'/src/translations/'
+  },
+
   optimization:{
     usedExports:true
   },

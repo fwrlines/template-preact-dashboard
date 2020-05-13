@@ -35,8 +35,11 @@ module.exports = {
   resolve:{
     // For npm link prototyping
     alias:{
-      'react'              :path.resolve('./node_modules/react'), //NOT in use, for preact
-      '@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks')
+      'react'           :path.resolve('./node_modules/react'),//NOT in use, for preact
+      'react-dom'       :path.resolve('./node_modules/react-dom'),
+      'react-intl'      :path.resolve('./node_modules/react-intl'),
+      'react-router-dom':path.resolve('./node_modules/react-router-dom')
+      //'@apollo/react-hooks':path.resolve('./node_modules/@apollo/react-hooks'),
     }
   },
 
@@ -63,7 +66,7 @@ module.exports = {
       path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/fonts'),
       path.resolve(__dirname, './node_modules/@fwrlines/ds/src/assets/images')
     ],
-    watchContentBase  :true,
+    watchContentBase  :false,
     historyApiFallback:true,
     port              :3344,
     host              :'0.0.0.0',
@@ -71,6 +74,11 @@ module.exports = {
     liveReload        :false,
     clientLogLevel    :'debug',
     disableHostCheck  :true //rdp
+  },
+
+  watchOptions:{
+    ignored         :['src/translations/', 'node_modules/**'],
+    aggregateTimeout:3000
   },
 
   stats:{
