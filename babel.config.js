@@ -37,18 +37,18 @@ module.exports = function (api) {
     [
       'react-intl',
       {
-        messagesDir:'./src/translations/messages'
+        messagesDir:'./translations/messages'
       }
     ],
     [
       'react-intl-extractor',
       {
-        extractedFile:'./src/translations/aggregated.json',
+        extractedFile:'./translations/aggregated.json',
         langFiles    :[{
-          path              :'./src/translations/it.json',
+          path              :'./translations/it.json',
           cleanUpNewMessages:true
         }, {
-          path              :'./src/translations/en.json',
+          path              :'./translations/en.json',
           cleanUpNewMessages:false
         }]
       }

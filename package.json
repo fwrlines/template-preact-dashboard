@@ -1,6 +1,6 @@
 {
   "name": "template-react-dashboard",
-  "version": "1.4.1",
+  "version": "1.4.0",
   "description": "",
   "main": "public/main.js",
   "engines": {
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:dev:start": "webpack-dev-server --progress --config ./webpack.client.dev.js --watch",
     "client:dev:compile": "webpack --config ./webpack.client.dev.js",
-    "client:prod:start": "webpack-dev-server --progress --config ./webpack.client.prod.js",
+    "client:prod:start": "webpack-dev-server --progress --config ./webpack.client.prod.js --info-verbosity verbose",
     "client:prod:start:bugged": "webpack-dev-server --progress --config ./webpack.client.prod.js --watch --info-verbosity verbose",
     "client:prod:compile": "webpack --config ./webpack.client.prod.js",
     "cds": "npm run client:dev:start",

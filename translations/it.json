@@ -1,0 +1,16 @@
+{
+  "app.auth.pages.login.subtitle": "",
+  "app.auth.pages.login.title": "",
+  "app.auth.pages.unauthorized.contact": "",
+  "app.auth.pages.unauthorized.explanation": "",
+  "app.auth.pages.unauthorized.subtitle": "",
+  "app.auth.pages.unauthorized.title": "",
+  "ds.site.paginator.next": "",
+  "ds.site.paginator.previous": "",
+  "app.dashboard.theme_selector.dark_theme": "",
+  "app.dashboard.theme_selector.light_theme": "",
+  "app.dashboard.theme_selector.system_theme": "",
+  "app.dashboard.theme_selector.theme": "",
+  "ds.oauth2.o_login_button.login": "",
+  "ds.dashboard.navigation.horizontal_bar.back": ""
+}

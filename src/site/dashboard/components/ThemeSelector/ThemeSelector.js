@@ -15,10 +15,10 @@ import messages from './messages'
 //import C from 'ui/cssClasses'
 
 //Relative imports
-//import styles from './theme_selector.scss'
-//import('./theme_selector.scss')
+import styles from './theme_selector.scss'
+import('./theme_selector.scss')
 
-//const baseClassName = 'theme_selector'
+const baseClassName = 'theme_selector'
 
 
 const themeOptions = [
@@ -61,21 +61,40 @@ const ThemeSelector = ({
   } = useContext(SiteContext)
 
   return (
-    <DownshiftSelect
-      inputId="dashboard-theme-selector"
-      //label="Please select your favourite fruit"
-      options={themeOptions}
-      //description="Here is a list of very tasty fruits you can choose your favourite from"
-      aesthetic="mars"
-      setInputValue={setInputValue}
-      value={preferredTheme}
-      buttonProps={{
-        className:'x-metadata',
-        simple   :true,
-        icon     :'j',
-        iconSide :'r'
-      }}
-    />
+    <p
+      className={[
+        baseClassName,
+        className
+      ].filter(e => e).join(' ')}
+      id={id}
+      style={style}
+
+    >
+      <span>
+        <FormattedMessage {...messages.theme} />
+        &nbsp;
+        {':'}
+      </span>
+      <DownshiftSelect
+        inputId="dashboard-theme-selector"
+        //label="Please select your favourite fruit"
+        options={themeOptions}
+        //description="Here is a list of very tasty fruits you can choose your favourite from"
+        aesthetic="mars"
+        setInputValue={setInputValue}
+        value={preferredTheme}
+        style={{
+          display:'inline-block',
+          width  :'auto'
+        }}
+        buttonProps={{
+          className:'x-metadata',
+          simple   :true,
+          icon     :'j',
+          iconSide :'r'
+        }}
+      />
+    </p>
   )
 }
 

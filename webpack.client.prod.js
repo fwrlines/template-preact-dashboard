@@ -76,6 +76,7 @@ module.exports = {
     disableHostCheck  :true //rdp
   },
 
+  
   watchOptions:{
     ignored         :['src/translations/', 'node_modules/**'],
     aggregateTimeout:3000
