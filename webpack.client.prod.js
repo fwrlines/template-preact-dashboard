@@ -73,13 +73,14 @@ module.exports = {
     hot               :true,
     liveReload        :false,
     clientLogLevel    :'debug',
-    disableHostCheck  :true //rdp
-  },
-
-  
-  watchOptions:{
-    ignored         :['src/translations/', 'node_modules/**'],
-    aggregateTimeout:3000
+    disableHostCheck  :true,//rdp
+    watchOptions      :{
+      ignored:[
+        path.resolve(__dirname, 'src', 'translations')
+        //path.resolve(__dirname, 'node_modules')
+      ],
+      aggregateTimeout:3000
+    }
   },
 
   stats:{

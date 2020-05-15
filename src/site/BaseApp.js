@@ -9,7 +9,7 @@ import GQL_QUERY_ME from './dashboard/graphql/me.graphql'
 
 import { SiteContextProvider, SessionContextProvider } from '@fwrlines/ds'
 
-import localizedMessages from '../translations/it.json'
+import localizedMessages from 'translations/it.json'
 
 import App from './App'
 import * as URLS from './urls'

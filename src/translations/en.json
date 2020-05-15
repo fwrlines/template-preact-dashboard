@@ -5,12 +5,12 @@
   "app.auth.pages.unauthorized.explanation": "You can try to login with another account. Alternatively, if you believe this is a mistake",
   "app.auth.pages.unauthorized.subtitle": "Your have sucessfully connected your account, but you are not allowed to log in.",
   "app.auth.pages.unauthorized.title": "Unauthorized",
+  "ds.site.paginator.next": "Older",
+  "ds.site.paginator.previous": "Newerl",
   "app.dashboard.theme_selector.dark_theme": "Dark",
   "app.dashboard.theme_selector.light_theme": "Light",
   "app.dashboard.theme_selector.system_theme": "System",
   "app.dashboard.theme_selector.theme": "Theme",
-  "ds.site.paginator.next": "Older",
-  "ds.site.paginator.previous": "Newerl",
   "ds.oauth2.o_login_button.login": "Login with {providerName}",
   "ds.dashboard.navigation.horizontal_bar.back": "Back"
 }

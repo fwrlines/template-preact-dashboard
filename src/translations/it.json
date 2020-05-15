@@ -1,0 +1,16 @@
+{
+  "app.auth.pages.login.subtitle": "Accedi di seguito alla tua dashboard",
+  "app.auth.pages.login.title": "Accesso alla dashboard",
+  "app.auth.pages.unauthorized.contact": "puoi contattare l'assistenza qui.",
+  "app.auth.pages.unauthorized.explanation": "Puoi provare ad accedere tramite un altro account. Se ritieni ci sia un problema",
+  "app.auth.pages.unauthorized.subtitle": "Hai collegato il tuo account correttamente ma non ti è permesso fare l'accesso.",
+  "app.auth.pages.unauthorized.title": "Non autorizzato",
+  "app.dashboard.theme_selector.dark_theme": "Scuro",
+  "app.dashboard.theme_selector.light_theme": "Chiaro",
+  "app.dashboard.theme_selector.system_theme": "Sistema",
+  "app.dashboard.theme_selector.theme": "",
+  "ds.dashboard.navigation.horizontal_bar.back": "Indietro",
+  "ds.oauth2.o_login_button.login": "Accedi con {providerName}",
+  "ds.site.paginator.next": "Precedente",
+  "ds.site.paginator.previous": "Nuovo"
+}
