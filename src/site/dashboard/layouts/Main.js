@@ -41,7 +41,6 @@ const Layout = ({
           className="md-h lg-h u50"
           label={'blah'}
         />
->
         <SwitchRouteMap
           routes={routes}
           NotFound={

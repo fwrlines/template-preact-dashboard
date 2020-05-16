@@ -78,8 +78,8 @@ module.exports = {
       ignored:[
         path.resolve(__dirname, 'src', 'translations')
         //path.resolve(__dirname, 'node_modules')
-      ],
-      aggregateTimeout:3000
+      ]
+      //aggregateTimeout:3000
     }
   },
 

@@ -12,5 +12,18 @@
   "ds.dashboard.navigation.horizontal_bar.back": "Indietro",
   "ds.oauth2.o_login_button.login": "Accedi con {providerName}",
   "ds.site.paginator.next": "Precedente",
-  "ds.site.paginator.previous": "Nuovo"
+  "ds.site.paginator.previous": "Nuovo",
+  "app.dashboard.navtree.account": "",
+  "app.dashboard.navtree.google_integration": "",
+  "app.dashboard.navtree.home": "",
+  "app.dashboard.navtree.hours": "",
+  "app.dashboard.navtree.logout": "",
+  "app.dashboard.navtree.payment": "",
+  "app.dashboard.navtree.plan": "",
+  "app.dashboard.navtree.planpayment": "",
+  "app.dashboard.navtree.profile": "",
+  "app.dashboard.navtree.publiccontact": "",
+  "app.dashboard.navtree.shop": "",
+  "app.dashboard.navtree.webpages": "",
+  "app.dashboard.navtree.website": ""
 }

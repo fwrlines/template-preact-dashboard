@@ -61,9 +61,10 @@ const ThemeSelector = ({
   } = useContext(SiteContext)
 
   return (
-    <p
+    <span
       className={[
         baseClassName,
+        'x-metadata c-x',
         className
       ].filter(e => e).join(' ')}
       id={id}
@@ -88,13 +89,13 @@ const ThemeSelector = ({
           width  :'auto'
         }}
         buttonProps={{
-          className:'x-metadata',
+          className:'x-subtitle',
           simple   :true,
           icon     :'j',
           iconSide :'r'
         }}
       />
-    </p>
+    </span>
   )
 }
 
