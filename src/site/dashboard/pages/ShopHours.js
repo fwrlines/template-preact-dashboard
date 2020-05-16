@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import { Page, Heading } from '@fwrlines/ds'
 
 
+
 //Config
 //import C from 'ui/cssClasses'
 
@@ -15,14 +16,13 @@ import { Page, Heading } from '@fwrlines/ds'
 //import messages from "./messages";
 // <FormattedMessage {...messages.title} />
 
-//const baseClassName = 'page_home'
-const baseId = 'page_home'
+//const baseClassName = 'page_shop_hours'
+const baseId = 'page_shop_hours'
 
 const helmet = {
-  robots   :'noindex, nofollow',
-  title    :'test of the title',
-  title_tag:'this should appear in the title tag'
-
+  robots             :'noindex, nofollow',
+  title              :'test of the title',
+  title_tag          :'this should appear in the title tag',
   /*
   canonical          :'https://home.com/description',
   meta_description   :'This is the meta description. 170 chars.',
@@ -39,78 +39,79 @@ const helmet = {
 
 const mainHeadingProps = {
   //id,
-  //className:'uc',
+  className:'uc',
   //style,
   //children, //appended at bottom
 
-  subtitle:'A place to edit data',
+  subtitle        :'Stanley Kubrick, 1960',
   //subtitleClassName,
   //subtitleProps:{},
 
-  heading  :'Home',
-  //headingClassName:'ts-green',
-  headingAs:'h1'
+  heading         :'Spartacus',
+  headingClassName:'ts-green',
+  headingAs       :'h1',
   //headingProps :{}
 
-  //label           :'Film',
-  //labelClassName  :'x-red basic',
+  label           :'Film',
+  labelClassName  :'x-red basic',
   //labelAs:'p',
   //labelProps :{}
 }
 
 /**
- * Page `Home`
- * Description :
+ * Page `ShopHours`
+ * Description : 
  */
-const Home = ({
+const ShopHours = ({
   history,
   location,
   match
-}) => (
-  <Page
-    id={baseId}
-    itemType="https://schema.org/FAQPage"
-    HELMET={helmet}
-  >
-    <Page.Section
-      head
-      className="p-u u2"
-      id="head"
+}) => {
+  
+  
+  return (
+    <Page id={ baseId }
+      itemType='https://schema.org/FAQPage'
+      HELMET={ helmet }
     >
+      <Page.Section
+        head
+        className='p-u u2'
+        id='head'
+      >
     
-      <Heading {...mainHeadingProps} />
-    </Page.Section>
-    <Page.Section
-      id="a1"
-      className="p-u u2"
-    >
-      <h2>Section A2</h2>
-      <p>Some content here. Blah blah</p>
+        <Heading { ...mainHeadingProps} />
+      </Page.Section>
+      <Page.Section
+        id='a1'
+        className='p-u u2'
+      >
+        <h2>Section A2</h2>
+        <p>Some content here. Blah blah</p>
     
-    </Page.Section>
-    <Page.Section
-      id="a2"
-      className="p-u u2"
-    >
-      <h2>Section A2</h2>
-      <p>Some content here. Blah blah</p>
+      </Page.Section>
+      <Page.Section
+        id='a2'
+        className='p-u u2'
+      >
+        <h2>Section A2</h2>
+        <p>Some content here. Blah blah</p>
     
-    </Page.Section>
-  </Page>
-)
+      </Page.Section>
+    </Page>
+)}
 
-Home.propTypes = {
-
+ShopHours.propTypes = {
   /**
-   *
+   * 
    */
-  someprop:PropTypes.node
+  someprop: PropTypes.node,
 
   /*
   as: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
-  ]),
+  ]), 
   : PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -124,10 +125,10 @@ Home.propTypes = {
 }
 
 /*
-Home.defaultProps = {
+ShopHours.defaultProps = { 
   status: 'neutral',
 }
 */
 
 
-export default Home
+export default ShopHours

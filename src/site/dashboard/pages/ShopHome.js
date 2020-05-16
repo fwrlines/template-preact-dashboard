@@ -15,8 +15,8 @@ import { Page, Heading } from '@fwrlines/ds'
 //import messages from "./messages";
 // <FormattedMessage {...messages.title} />
 
-//const baseClassName = 'page_home'
-const baseId = 'page_home'
+//const baseClassName = 'page_shop_home'
+const baseId = 'page_shop_home'
 
 const helmet = {
   robots   :'noindex, nofollow',
@@ -37,6 +37,7 @@ const helmet = {
   */
 }
 
+
 const mainHeadingProps = {
   //id,
   //className:'uc',
@@ -47,7 +48,7 @@ const mainHeadingProps = {
   //subtitleClassName,
   //subtitleProps:{},
 
-  heading  :'Home',
+  heading  :'Shop Home',
   //headingClassName:'ts-green',
   headingAs:'h1'
   //headingProps :{}
@@ -59,10 +60,10 @@ const mainHeadingProps = {
 }
 
 /**
- * Page `Home`
+ * Page `ShopHome`
  * Description :
  */
-const Home = ({
+const ShopHome = ({
   history,
   location,
   match
@@ -99,7 +100,7 @@ const Home = ({
   </Page>
 )
 
-Home.propTypes = {
+ShopHome.propTypes = {
 
   /**
    *
@@ -124,10 +125,10 @@ Home.propTypes = {
 }
 
 /*
-Home.defaultProps = {
+ShopHome.defaultProps = {
   status: 'neutral',
 }
 */
 
 
-export default Home
+export default ShopHome

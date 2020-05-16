@@ -15,8 +15,8 @@ import { Page, Heading } from '@fwrlines/ds'
 //import messages from "./messages";
 // <FormattedMessage {...messages.title} />
 
-//const baseClassName = 'page_home'
-const baseId = 'page_home'
+//const baseClassName = 'page_account_plan_payment'
+const baseId = 'page_account_plan_payment'
 
 const helmet = {
   robots   :'noindex, nofollow',
@@ -37,6 +37,7 @@ const helmet = {
   */
 }
 
+
 const mainHeadingProps = {
   //id,
   //className:'uc',
@@ -47,7 +48,7 @@ const mainHeadingProps = {
   //subtitleClassName,
   //subtitleProps:{},
 
-  heading  :'Home',
+  heading  :'Plan Payment',
   //headingClassName:'ts-green',
   headingAs:'h1'
   //headingProps :{}
@@ -59,10 +60,10 @@ const mainHeadingProps = {
 }
 
 /**
- * Page `Home`
+ * Page `AccountPlanPayment`
  * Description :
  */
-const Home = ({
+const AccountPlanPayment = ({
   history,
   location,
   match
@@ -99,7 +100,7 @@ const Home = ({
   </Page>
 )
 
-Home.propTypes = {
+AccountPlanPayment.propTypes = {
 
   /**
    *
@@ -124,10 +125,10 @@ Home.propTypes = {
 }
 
 /*
-Home.defaultProps = {
+AccountPlanPayment.defaultProps = {
   status: 'neutral',
 }
 */
 
 
-export default Home
+export default AccountPlanPayment
