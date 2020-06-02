@@ -3,21 +3,21 @@ query {
     id
     username
     email
-    first_name
-    last_name
-    is_active
-    ts_created
-    ts_updated
-    oauth2 {
+    firstName
+    lastName
+    isActive
+    createdAt
+    updatedAt
+    oAuth2Profiles {
       id
-      ts_created
-      ts_updated
       picture
       provider
       locale
       name
       email
-      email_verified
+      emailVerified
+      createdAt
+      updatedAt
     }
   }
 }

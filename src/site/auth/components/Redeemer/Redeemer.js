@@ -45,11 +45,11 @@ const Redeemer = (props) => {
   useEffect(() => {
     if (loginInfo) {
       setSessionCookie(
-        loginInfo.token,
+        loginInfo.access_token,
         {
           //path  :'/', //make it accessible on all pages //Deprecated, now set up at the provider level
           //expires:
-          maxAge:loginInfo.maxAge,
+          maxAge:loginInfo.expires_in,
           //domain: //defaults on current domain
           secure:!(process.env.LOCAL === 'true')
           //sameSite:'strict'

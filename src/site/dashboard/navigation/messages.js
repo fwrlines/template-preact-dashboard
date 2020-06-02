@@ -8,33 +8,48 @@ const messages = defineMessages({
   },
   account:{
     id            :'app.dashboard.navtree.account',
+    defaultMessage:'Account Information',
+    description   :'Label for account in the navigation sidebar'
+  },
+  account_home:{
+    id            :'app.dashboard.navtree.account_home',
+    defaultMessage:'Overview',
+    description   :'Label for the base account section in the navigation sidebar'
+  },
+  account_label:{
+    id            :'app.dashboard.navtree.account_label',
     defaultMessage:'Account',
     description   :'Label for account in the navigation sidebar'
   },
-  googleintgr:{
-    id            :'app.dashboard.navtree.google_integration',
+  account_google_integration:{
+    id            :'app.dashboard.navtree.account_google_integration',
     defaultMessage:'Google Account Link',
     description   :'Label for the google account module in the navigation sidebar'
   },
-  profile:{
-    id            :'app.dashboard.navtree.profile',
+  account_profile:{
+    id            :'app.dashboard.navtree.account_profile',
     defaultMessage:'My Profile',
     description   :'Label for profile link in the navigation sidebar'
   },
-  plan:{
-    id            :'app.dashboard.navtree.plan',
-    defaultMessage:'Plan details',
-    description   :'Label for plan in the navigation sidebar'
+  billing:{
+    id            :'app.dashboard.navtree.billing',
+    defaultMessage:'Plan and payment',
+    description   :'Label for plan and payment in the navigation sidebar'
   },
-  payment:{
-    id            :'app.dashboard.navtree.payment',
+  billing_home:{
+    id            :'app.dashboard.navtree.billing_home',
+    defaultMessage:'General',
+    description   :'Label for the base page in the billing section in the navigation sidebar. As in "General Information"'
+  },
+  billing_payment:{
+    id            :'app.dashboard.navtree.billing_payment',
     defaultMessage:'Payment details',
     description   :'Label for payment in the navigation sidebar'
   },
-  planpayment:{
-    id            :'app.dashboard.navtree.planpayment',
-    defaultMessage:'Plan and payment',
-    description   :'Label for plan and payment in the navigation sidebar'
+  billing_plan:{
+    id            :'app.dashboard.navtree.billing_plan',
+    defaultMessage:'Plan details',
+    description   :'Label for plan in the navigation sidebar'
   },
   logout:{
     id            :'app.dashboard.navtree.logout',
@@ -46,23 +61,28 @@ const messages = defineMessages({
     defaultMessage:'My Shop',
     description   :'Label for in the navigation sidebar'
   },
-  hours:{
-    id            :'app.dashboard.navtree.hours',
+  shop_home:{
+    id            :'app.dashboard.navtree.shop_home',
+    defaultMessage:'General',
+    description   :'Label for the base page in the shop section in the navigation sidebar'
+  },
+  shop_contact:{
+    id            :'app.dashboard.navtree.shop_contact',
+    defaultMessage:'Public Information',
+    description   :'Label for public contact information in the navigation sidebar'
+  },
+  shop_hours:{
+    id            :'app.dashboard.navtree.shop_hours',
     defaultMessage:'Opening Hours',
     description   :'Label for hopening hours in the navigation sidebar'
-  },
-  publiccontact:{
-    id            :'app.dashboard.navtree.publiccontact',
-    defaultMessage:'Public Contact Information',
-    description   :'Label for public contact information in the navigation sidebar'
   },
   website:{
     id            :'app.dashboard.navtree.website',
     defaultMessage:'My Website',
     description   :'Label for website in the navigation sidebar'
   },
-  pages:{
-    id            :'app.dashboard.navtree.webpages',
+  website_pages:{
+    id            :'app.dashboard.navtree.website_pages',
     defaultMessage:'Pages',
     description   :'Label for website pages in the navigation sidebar'
   }

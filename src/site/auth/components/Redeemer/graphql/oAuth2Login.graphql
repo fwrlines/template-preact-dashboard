@@ -1,6 +1,7 @@
 mutation getJWT($code: String!) {
-  oAuth2Login(code: $code) {
-    token
-    maxAge
+  oAuth2Login(authorization_code: $code) {
+    access_token,
+    expires_in,
+    token_type
   }
 }

@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react'
 //import Prototypes from 'prototypes' //Capitalize, etc
 import { Switch, Redirect, Route, Link } from 'react-router-dom'
 
+//import NotFound from './NotFound.js'
+
 //import oAuth2Routes from './oauth2/routes'
 //import Clock from 'ui/test/AsyncClock'
 //import QueryTester from 'ui/test/QueryTester'

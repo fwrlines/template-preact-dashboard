@@ -31,7 +31,7 @@ const MyProfile = ({
   
   console.log('EXE => Consumer, context is', data)
 
-  const oAuthProfileData = data.oauth2 ? data.oauth2.find(e => e.provider == 'google') : {}
+  const oAuthProfileData = data.oAuth2Profiles ? data.oAuth2Profiles.find(e => e.provider == 'google') : {}
   const od = oAuthProfileData
 
   return (
