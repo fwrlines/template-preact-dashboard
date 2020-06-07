@@ -149,12 +149,12 @@ module.exports = {
 
     new CopyPlugin({
       patterns:[
-        { from: './src/assets/fonts', to: './public' },
-        { from: './src/assets/images', to: './public' },
-        { from: './src/assets/favicon', to: './public' }, //https://www.favicon-generator.org/
-        { from: './src/assets/other', to: './public' },
-        { from: './node_modules/@fwrlines/ds/src/assets/fonts', to: './public' },
-        { from: './node_modules/@fwrlines/ds/src/assets/images', to: './public' }
+        { from: './src/assets/fonts', to: './' },
+        { from: './src/assets/images', to: './' },
+        { from: './src/assets/favicon', to: './' }, //https://www.favicon-generator.org/
+        { from: './src/assets/other', to: './' },
+        { from: './node_modules/@fwrlines/ds/src/assets/fonts', to: './' },
+        { from: './node_modules/@fwrlines/ds/src/assets/images', to: './' }
       ]
     }
     ),
