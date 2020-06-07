@@ -2,7 +2,7 @@
   {
     "id": "app.auth.pages.login.subtitle",
     "description": "Subtitle for the login page",
-    "defaultMessage": "Login below to your dashboard account"
+    "defaultMessage": "Login here to your dashboard account"
   },
   {
     "id": "app.auth.pages.login.title",

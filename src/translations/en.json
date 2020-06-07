@@ -1,5 +1,5 @@
 {
-  "app.auth.pages.login.subtitle": "Login below to your dashboard account",
+  "app.auth.pages.login.subtitle": "Login here to your dashboard account",
   "app.auth.pages.login.title": "Dashboard Access",
   "app.auth.pages.unauthorized.contact": "you can contact support here.",
   "app.auth.pages.unauthorized.explanation": "You can try to login with another account. Alternatively, if you believe this is a mistake",

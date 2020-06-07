@@ -9,7 +9,7 @@ const messages = {
   },
   not_found_description:{
     id            :'ds.not_found.description',
-    defaultMessage:'The content you have request has not been found.',
+    defaultMessage:'The content you have requested has not been found.',
     description   :'Description'
   }
 
