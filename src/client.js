@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 
-import BaseApp from 'site/BaseApp'
+import BaseApp from 'app/BaseApp'
 
 import '@fwrlines/alphabet-scss/main.scss'
 
