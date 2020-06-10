@@ -1,6 +1,6 @@
 import * as React from 'react'
 import MODULE_URLS from '../urls'
-import { AUTH as AUTH_URLS } from 'site/urls'
+import { AUTH as AUTH_URLS } from 'app/urls'
 
 import { FormattedMessage } from 'react-intl'
 
@@ -50,7 +50,7 @@ export default {
       section :<FormattedMessage {...messages.account_label} />,
       title   :<FormattedMessage {...messages.account} />,
       pathname:MODULE_URLS.ACCOUNT_HOME,
-      logo:'/illustrations/iso-computer.png',
+      logo    :'/illustrations/iso-computer.png',
       //redirectFromPathname:['/account/', '/account/profile/'],
       subItems:[
         {
@@ -93,6 +93,7 @@ export default {
         }
       ]
     },
+
     /*
     {
       section :<FormattedMessage {...messages.account} />,
