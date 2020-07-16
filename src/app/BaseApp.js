@@ -16,7 +16,7 @@ import * as URLS from './urls'
 
 const client = getClient(process.env.GRAPHQL_ENDPOINT)
 
-const profileContextProps = {
+const sessionContextProps = {
   cookieName       :process.env.SESSION_COOKIE_NAME, //defaults to session insteqd
   //cookiePath:'/' //Defaults to '/''
   loginPath        :URLS.AUTH.LOGIN,
@@ -48,7 +48,7 @@ export default (
           messages={localizedMessages}
         >
           <SessionContextProvider
-            {...profileContextProps}
+            {...sessionContextProps}
           >
 	        <App />
           </SessionContextProvider>
