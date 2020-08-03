@@ -106,7 +106,13 @@ module.exports = {
           }, {
             loader:'css-loader'
           }, {
-            loader:'sass-loader'
+            loader :'sass-loader',
+            options:{
+              sourceMap  :true,
+              sassOptions:{
+                includePaths:['./node_modules']
+              }
+            }
           }
         ]
       }
