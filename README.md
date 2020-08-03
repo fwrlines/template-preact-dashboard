@@ -1,21 +1,9 @@
-## Features 
+## Install and run
 
-+ 100/100 pagespeed BEFORE cdn caching
-+ 60kb client transfer size (gzip)
-+ modular scss library
-+ modular component library
-+ includes apollo gql client lib
-+ optimizations : terser minification, postcss reduction, css minification, es6 tree shaking, 
++ `npm i`
++ Fill the `.env` file using the template
++ `npm run cds` (a shorter version of `npm run client:development:start`)
 
-## Required env vars
+## Build and ship to production
 
-+ `GRAPHQL_ENDPOINT`, for instance `https://api.mysite.com/graphql`
-+ `LOCAL` : for instance `true` //TODO undocumented
-+ `SESSION_COOKIE_NAME` : for instance `session`
-
-## Install
-
-
-```
-npm i
-```
++ `npm run bd`
