@@ -22,11 +22,16 @@
   {
     "id": "app.auth.pages.unauthorized.explanation",
     "description": "Text for the unauthorized page",
-    "defaultMessage": "You can try to login with another account. Alternatively, if you believe this is a mistake"
+    "defaultMessage": "You can try to login with another account {link}. Alternatively, if you believe this is a mistake"
   },
   {
     "id": "app.auth.pages.unauthorized.contact",
     "description": "Contact support when theres a login problem",
     "defaultMessage": "you can contact support here."
+  },
+  {
+    "id": "app.auth.pages.unauthorized.here",
+    "description": "Link to the login page",
+    "defaultMessage": "here"
   }
 ]
