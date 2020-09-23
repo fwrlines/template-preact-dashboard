@@ -13,7 +13,7 @@ import QUERY from './graphql/oAuth2Login.graphql'
 
 import { Heading, InlineLoader, SessionContext } from '@fwrlines/ds'
 
-import { RedirectAfterLoginUrl } from '../../urls'
+import { RedirectAfterLoginUrl, RedirectUnauthorized } from '../../urls'
 
 /**
  * Use `Redeemer` to exchange an authorization code for a login token
@@ -69,18 +69,28 @@ const Redeemer = (props) => {
   )
 
   useEffect(() => {
-    if(isCookieReady) {
+    if (isCookieReady) {
       loadCurrentUser()
     }
   }, [isCookieReady])
 
   useEffect(() => {
-    if(isConnected) {
+    if (isConnected) {
       history.push(RedirectAfterLoginUrl)
 
     }
     
   }, [isConnected])
+
+  useEffect(() => {
+    if (error && error.graphQLErrors) {
+      const err = error.graphQLErrors[0]
+      if (err.extensions.exception.code === 'INCORRECT_CREDENTIALS') {
+        history.push(RedirectUnauthorized)
+
+      }
+    }
+  }, [error])
 
   return (
     <div

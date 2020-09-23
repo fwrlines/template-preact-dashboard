@@ -24,13 +24,18 @@ const messages = defineMessages({
   },
   unauthorizedExplanation:{
     id            :'app.auth.pages.unauthorized.explanation',
-    defaultMessage:'You can try to login with another account. Alternatively, if you believe this is a mistake',
+    defaultMessage:'You can try to login with another account { link }. Alternatively, if you believe this is a mistake',
     description   :'Text for the unauthorized page'
   },
   unauthorizedContact:{
     id            :'app.auth.pages.unauthorized.contact',
     defaultMessage:'you can contact support here.',
     description   :'Contact support when theres a login problem'
+  },
+  here:{
+    id            :'app.auth.pages.unauthorized.here',
+    defaultMessage:'here',
+    description   :'Link to the login page'
   }
 })
 
