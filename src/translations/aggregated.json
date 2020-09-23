@@ -2,7 +2,7 @@
   {
     "id": "app.auth.pages.login.subtitle",
     "description": "Subtitle for the login page",
-    "defaultMessage": "Login here to your dashboard account"
+    "defaultMessage": "Login below to your dashboard account"
   },
   {
     "id": "app.auth.pages.login.title",
@@ -135,9 +135,103 @@
     "defaultMessage": "Theme"
   },
   {
+    "id": "ds.collections.blog.article_card.cta",
+    "description": "The CTA at the bottom of the article cards",
+    "defaultMessage": "Read more"
+  },
+  {
+    "id": "ds.collections.cp.status_bar.connected",
+    "description": "Text if the endpoint is connected",
+    "defaultMessage": "Connected to the GraphQL endpoint at {endpoint}."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.connected_short",
+    "description": "Text if the endpoint is connected",
+    "defaultMessage": "Connected."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.connection_error",
+    "description": "Text if the endpoint is not connected",
+    "defaultMessage": "Error connecting to the endpoint at {endpoint}."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.connection_error_short",
+    "description": "Text if the endpoint is not connected",
+    "defaultMessage": "Connection error."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.loading",
+    "description": "Text to retry connecting.",
+    "defaultMessage": "Testing the API connection at {endpoint}"
+  },
+  {
+    "id": "ds.collections.cp.status_bar.loading_short",
+    "description": "Text to retry connecting.",
+    "defaultMessage": "Connecting..."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.logout",
+    "description": "Text for the logout link.",
+    "defaultMessage": "Logout."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.response_is",
+    "description": "Text if the endpoint is connected",
+    "defaultMessage": "Server answered {response}."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.response_is_short",
+    "description": "Text if the endpoint is connected",
+    "defaultMessage": "{response}."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.retry",
+    "description": "Text to retry connecting.",
+    "defaultMessage": "Retry."
+  },
+  {
+    "id": "ds.collections.cp.status_bar.update",
+    "description": "Text to retry connecting.",
+    "defaultMessage": "Update."
+  },
+  {
+    "id": "ds.collections.experimental.curriculum.title",
+    "description": "The title of the component",
+    "defaultMessage": "Here are my degrees in antichronological order."
+  },
+  {
+    "id": "ds.collections.saas.plan.features",
+    "defaultMessage": "Features"
+  },
+  {
+    "id": "ds.collections.saas.plan.price.free",
+    "description": "Text to display when the price is zero",
+    "defaultMessage": "Free"
+  },
+  {
+    "id": "ds.collections.saas.plan.price.monthly",
+    "description": "Next to the price to indicate periodicity",
+    "defaultMessage": "/month"
+  },
+  {
+    "id": "ds.common.shortener.read_more",
+    "description": "Read more on the shortener",
+    "defaultMessage": "Read more."
+  },
+  {
+    "id": "ds.common.shortener.show",
+    "description": "Used on the minimal version of the shortener",
+    "defaultMessage": "Show"
+  },
+  {
     "id": "ds.dashboard.navigation.horizontal_bar.back",
     "description": "Navigation back button",
     "defaultMessage": "Back"
+  },
+  {
+    "id": "ds.form.input_label.optional",
+    "description": "What appears after a form label when the input is optional",
+    "defaultMessage": "Optional"
   },
   {
     "id": "ds.oauth2.o_login_button.login",

@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react'
 
-export default function Loading() {
+import {
+  Heading,
+  InlineLoader
+} from '@fwrlines/ds'
+
+export default ({ color='link' }) =>
 
   /*
   useEffect(() => {
@@ -13,5 +18,35 @@ export default function Loading() {
   }, [])
   return null
   */
-  return <h1>A module is loading</h1>
-}
+  (
+    <div
+      className="uc u1"
+      style={{
+        height        :'100%',
+        display       :'flex',
+        flexDirection :'column',
+        justifyContent:'center',
+        alignItems    :'center'
+      }}
+    >
+      <Heading
+        headingAs="h1"
+        heading="Loading module"
+      />
+      {/*
+      <div>
+        <pre className="x-paragraph pv-u">
+          { JSON.stringify(props, null, 2) }
+        </pre>
+      </div>*/}
+      <div className="pv-u">
+
+        <InlineLoader
+          type="circle"
+          height="3em"
+          loaderClassName={`x-${color}`}
+        />
+      </div>
+    </div>
+  )
+

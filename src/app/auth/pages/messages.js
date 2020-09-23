@@ -9,7 +9,7 @@ const messages = defineMessages({
   },
   loginSubtitle:{
     id            :'app.auth.pages.login.subtitle',
-    defaultMessage:'Login here to your dashboard account',
+    defaultMessage:'Login below to your dashboard account',
     description   :'Subtitle for the login page'
   },
   unauthorizedTitle:{
