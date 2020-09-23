@@ -1,6 +1,6 @@
 import * as React from 'react'
 import MODULE_URLS from '../urls'
-import { AUTH as AUTH_URLS } from 'app/urls'
+import { URLS as AUTH_URLS } from 'app/auth'
 
 import { FormattedMessage } from 'react-intl'
 
@@ -104,7 +104,8 @@ export default {
     {
       section :<FormattedMessage {...messages.account_label} />,
       title   :<FormattedMessage {...messages.logout} />,
-      pathname:AUTH_URLS.LOGOUT
+      pathname:'/logout'
+      //pathname:AUTH_URLS.LOGOUT
     }
   ]
 }

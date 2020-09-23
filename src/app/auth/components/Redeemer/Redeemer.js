@@ -1,17 +1,19 @@
 /* @fwrlines/generator-react-component 1.5.0 */
 import * as React from 'react'
-import { useEffect, useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 //import PropTypes from 'prop-types'
 
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, useHistory, Redirect } from 'react-router-dom'
 
 import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
 
 import QUERY from './graphql/oAuth2Login.graphql'
 
-import { SessionContext } from '@fwrlines/ds'
+import { Heading, InlineLoader, SessionContext } from '@fwrlines/ds'
+
+import { RedirectAfterLoginUrl } from '../../urls'
 
 /**
  * Use `Redeemer` to exchange an authorization code for a login token
@@ -37,9 +39,14 @@ const Redeemer = (props) => {
   [called, code, doLogin]
   )
 
+  const [isCookieReady, setIsCookieReady] = useState()
+
   const {
     //sessionCookie,
-    setSessionCookie
+    isConnected,
+    currentUserData,
+    setSessionCookie,
+    loadCurrentUser
   } = useContext(SessionContext)
 
   useEffect(() => {
@@ -55,20 +62,58 @@ const Redeemer = (props) => {
           //sameSite:'strict'
         }
       )
-      history.push('/')
+      setIsCookieReady(true)
     }
   },
   [history, setSessionCookie, loginInfo]
   )
 
+  useEffect(() => {
+    if(isCookieReady) {
+      loadCurrentUser()
+    }
+  }, [isCookieReady])
+
+  useEffect(() => {
+    if(isConnected) {
+      history.push(RedirectAfterLoginUrl)
+
+    }
+    
+  }, [isConnected])
 
   return (
-    <>
-      <h1>
-      We are redeeming a code to login
-      </h1>
-      <pre>{ code }</pre>
-    </>
+    <div
+      className="uc u1"
+      style={{
+        height        :'100%',
+        display       :'flex',
+        flexDirection :'column',
+        justifyContent:'center',
+        alignItems    :'center'
+      }}
+    >
+      <Heading
+        headingAs="h1"
+        heading="Logging in"
+        subtitle={`${code}`}
+      />
+      <div className="pv-u">
+        
+        <InlineLoader
+          type="circle"
+          height="3em"
+          loaderClassName="x-link"
+        />
+      </div>
+      <div>
+        <p className="x-subtitle c-x">
+          Will redirect to
+          {' '}
+          <code className="c-x">{ RedirectAfterLoginUrl }</code>
+        </p>
+      </div>
+    </div>
 
   )
 }

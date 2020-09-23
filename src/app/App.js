@@ -10,9 +10,9 @@ import { Switch, Redirect, Route, Link } from 'react-router-dom'
 //import { MyProfile } from 'ui/local/dashboardMain'
 
 import {
-  AnimatedVCaret,
   SessionContext,
-  SwitchRouteMap
+  SwitchRouteMap,
+  useSite
 } from '@fwrlines/ds'
 
 
@@ -20,49 +20,32 @@ import routes from './allRoutes.js'
 
 const App = () => {
   //const [active, setActive] = useState(false)
-
   const {
     loginPath,
     logoutPath
   } = useContext(SessionContext)
 
+  const {
+    userTheme
+  } = useSite()
+
   return (
-    <>
+    <div
+      className={
+        [
+          'ui-'+ userTheme,
+          'y-background b-y'
+        ].filter(e => e).join(' ')
+      }
+      style={{ minHeight: '100%', height: '100%' }}
+    >
       <SwitchRouteMap
         routes={routes}
         NotFound={<Redirect to={loginPath} />}
       />
-      {/*}
-      <MyProfile />
-              <Clock
-                thing="thing"
-                thing2="thing2"
-              />
-              {' '}
-              <QueryTester />
-Includes
-      <AnimatedVCaret
-        active={active}
-        setActive={setActive}
-        id="myarrow"
-        width="200px"
-      />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to={loginPath}>LOGIN</Link>
-          </li>
-          <li>
-            <Link to="/d/profile">My account</Link>
-          </li>
-        </ul>
-      </nav>
-      */}
-    </>
+    </div>
   )
+
 }
 
 export default App

@@ -11,6 +11,8 @@ import { useHistory } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 import messages from './messages'
 
+import Loading from 'app/Loading'
+
 //Config
 //import C from 'ui/cssClasses'
 
@@ -62,7 +64,12 @@ const Login = ({
   //someprop
 }) => {
 
-  const { isConnected, dashboardHomePath } = useContext(SessionContext)
+  const { 
+    currentUserData,
+    currentUserLoading, 
+    isConnected, 
+    dashboardHomePath
+  } = useContext(SessionContext)
 
   const history = useHistory()
 
@@ -73,11 +80,25 @@ const Login = ({
   [history, dashboardHomePath, isConnected]
   )
 
+  if(currentUserLoading || currentUserData) return (
+    <Loading color='green'>
+    </Loading>
+  )
+
   return (
-    <Page id={baseId}>
+    <Page
+      id={baseId}
+      style={{
+        height        :'100%',
+        display       :'flex',
+        flexDirection :'column',
+        justifyContent:'center',
+        alignItems    :'center'
+      }}
+    >
       <Page.Section
         head
-        className="p-u u2"
+        className="p-u u2 uc"
         id="head"
       >
     
@@ -85,7 +106,7 @@ const Login = ({
       </Page.Section>
       <Page.Section
         id="a1"
-        className="p-u u2"
+        className="p-u u2 uc"
       >
         <LoginButton />
       </Page.Section>

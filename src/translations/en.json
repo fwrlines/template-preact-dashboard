@@ -1,5 +1,5 @@
 {
-  "app.auth.pages.login.subtitle": "Login here to your dashboard account",
+  "app.auth.pages.login.subtitle": "Login below to your dashboard account",
   "app.auth.pages.login.title": "Dashboard Access",
   "app.auth.pages.unauthorized.contact": "you can contact support here.",
   "app.auth.pages.unauthorized.explanation": "You can try to login with another account. Alternatively, if you believe this is a mistake",
@@ -37,5 +37,24 @@
   "app.dashboard.navtree.website_pages": "Pages",
   "app.dashboard.navtree.account_label": "Account",
   "app.dashboard.navtree.billing_home": "General",
-  "app.dashboard.navtree.account_home": "Overview"
+  "app.dashboard.navtree.account_home": "Overview",
+  "ds.collections.saas.plan.features": "Features",
+  "ds.collections.experimental.curriculum.title": "Here are my degrees in antichronological order.",
+  "ds.common.shortener.read_more": "Read more.",
+  "ds.common.shortener.show": "Show",
+  "ds.collections.cp.status_bar.connected": "Connected to the GraphQL endpoint at {endpoint}.",
+  "ds.collections.cp.status_bar.connected_short": "Connected.",
+  "ds.collections.cp.status_bar.connection_error": "Error connecting to the endpoint at {endpoint}.",
+  "ds.collections.cp.status_bar.connection_error_short": "Connection error.",
+  "ds.collections.cp.status_bar.loading": "Testing the API connection at {endpoint}",
+  "ds.collections.cp.status_bar.loading_short": "Connecting...",
+  "ds.collections.cp.status_bar.logout": "Logout.",
+  "ds.collections.cp.status_bar.response_is": "Server answered {response}.",
+  "ds.collections.cp.status_bar.response_is_short": "{response}.",
+  "ds.collections.cp.status_bar.retry": "Retry.",
+  "ds.collections.cp.status_bar.update": "Update.",
+  "ds.collections.saas.plan.price.free": "Free",
+  "ds.collections.saas.plan.price.monthly": "/month",
+  "ds.form.input_label.optional": "Optional",
+  "ds.collections.blog.article_card.cta": "Read more"
 }
