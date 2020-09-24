@@ -12,11 +12,14 @@ import {
 import { FormattedMessage } from 'react-intl'
 import messages from './messages'
 
+import { Link } from 'react-router-dom'
 //Config
 //import C from 'ui/cssClasses'
 
 //const baseClassName = 'page_unauthorized'
 const baseId = 'page_unauthorized'
+
+import URLS from '../urls'
 
 const helmet = {
   robots   :'noindex, nofollow',
@@ -67,12 +70,18 @@ const Unauthorized = ({
 }) => (
   <Page
     id={baseId}
-    itemType="https://schema.org/FAQPage"
     HELMET={helmet}
+    style={{
+      height        :'100%',
+      display       :'flex',
+      flexDirection :'column',
+      justifyContent:'center',
+      alignItems    :'center'
+    }}
   >
     <Page.Section
       head
-      className="p-u u2"
+      className="p-u u2 uc"
       id="head"
     >
     
@@ -80,10 +89,18 @@ const Unauthorized = ({
     </Page.Section>
     <Page.Section
       id="a1"
-      className="p-u u2"
+      className="p-u u2 uc"
     >
       <p>
-        <FormattedMessage {...messages.unauthorizedExplanation} />
+        <FormattedMessage
+          {...messages.unauthorizedExplanation}
+          values={{
+            link:<Link to={URLS.LOGIN}>
+              <FormattedMessage {...messages.here} />
+            </Link>
+
+          }}
+        />
         {' '}
         <SupportEmailLink label={
           <FormattedMessage {...messages.unauthorizedContact} />

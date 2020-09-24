@@ -2,7 +2,7 @@
   "regions":["bru"],
   "build":{
     "env": {
-      "GRAPHQL_ENDPOINT":"https://api.fwrlines.com/graphql",
+      "GRAPHQL_ENDPOINT":"https://api.meccamico.com/graphql",
       "SESSION_COOKIE_NAME":"session"
     }
   },

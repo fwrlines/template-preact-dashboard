@@ -4,11 +4,14 @@ import * as URLS from 'app/urls'
 
 // const basePath = '/auth/'
 
+const UNAUTHORIZED = '/unauthorized'
+
 export default {
-  LOGIN       :'/login',
-  REDEEM      :'/redeem',
-  LOGOUT      :'/logout',
-  UNAUTHORIZED:'/unauthorized'
+  LOGIN :'/login',
+  REDEEM:'/redeem',
+  LOGOUT:'/logout',
+  UNAUTHORIZED
 }
 
 export const RedirectAfterLoginUrl = URLS.DASHBOARD.HOME
+export const RedirectUnauthorized = UNAUTHORIZED

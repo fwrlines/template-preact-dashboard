@@ -2,7 +2,7 @@
   "app.auth.pages.login.subtitle": "Accedi di seguito alla tua dashboard",
   "app.auth.pages.login.title": "Accesso alla dashboard",
   "app.auth.pages.unauthorized.contact": "puoi contattare l'assistenza qui.",
-  "app.auth.pages.unauthorized.explanation": "Puoi provare ad accedere tramite un altro account. Se ritieni ci sia un problema",
+  "app.auth.pages.unauthorized.explanation": "Puoi provare ad accedere tramite un altro account { link }. Se ritieni ci sia un problema",
   "app.auth.pages.unauthorized.subtitle": "Hai collegato il tuo account correttamente ma non ti è permesso fare l'accesso.",
   "app.auth.pages.unauthorized.title": "Non autorizzato",
   "app.dashboard.navtree.account": "Profilo",
@@ -48,5 +48,6 @@
   "ds.collections.saas.plan.price.free": "",
   "ds.collections.saas.plan.price.monthly": "",
   "ds.form.input_label.optional": "",
-  "ds.collections.blog.article_card.cta": ""
+  "ds.collections.blog.article_card.cta": "",
+  "app.auth.pages.unauthorized.here": ""
 }
