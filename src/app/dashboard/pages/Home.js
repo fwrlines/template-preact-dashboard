@@ -11,8 +11,8 @@ import { Page, Heading } from '@fwrlines/ds'
 
 //Intl
 
-//import { FormattedMessage} from "react-intl";
-//import messages from "./messages";
+import { FormattedMessage } from 'react-intl'
+import messages from './messages'
 // <FormattedMessage {...messages.title} />
 
 //const baseClassName = 'page_home'
@@ -43,11 +43,11 @@ const mainHeadingProps = {
   //style,
   //children, //appended at bottom
 
-  subtitle:'A place to edit data',
+  subtitle:<FormattedMessage {...messages.home_subtitle} />,
   //subtitleClassName,
   //subtitleProps:{},
 
-  heading  :'Home',
+  heading  :<FormattedMessage {...messages.home_title} />,
   //headingClassName:'ts-green',
   headingAs:'h1'
   //headingProps :{}

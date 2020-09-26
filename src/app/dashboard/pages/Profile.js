@@ -10,6 +10,9 @@ import { MyProfile } from '../components'
 //Config
 //import C from 'ui/cssClasses'
 
+import { FormattedMessage } from 'react-intl'
+import messages from './messages'
+
 //const baseClassName = 'page_profile'
 const baseId = 'page_profile'
 
@@ -38,11 +41,11 @@ const mainHeadingProps = {
   //style,
   //children, //appended at bottom
 
-  subtitle:'In this page you can view and modify information related to your profile on this website.',
+  subtitle:<FormattedMessage {...messages.profile_subtitle} />,
   //subtitleClassName,
   //subtitleProps:{},
 
-  heading         :'My Profile',
+  heading         :<FormattedMessage {...messages.profile_title} />,
   headingClassName:'ts-green',
   headingAs       :'h1'
   //headingProps :{}

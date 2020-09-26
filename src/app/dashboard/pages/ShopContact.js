@@ -6,23 +6,23 @@ import PropTypes from 'prop-types'
 import { Page, Heading } from '@fwrlines/ds'
 
 
-
 //Config
 //import C from 'ui/cssClasses'
 
 //Intl
 
-//import { FormattedMessage} from "react-intl";
-//import messages from "./messages";
+import { FormattedMessage } from 'react-intl'
+import messages from './messages'
 // <FormattedMessage {...messages.title} />
 
 //const baseClassName = 'page_shop_contact'
 const baseId = 'page_shop_contact'
 
 const helmet = {
-  robots             :'noindex, nofollow',
-  title              :'test of the title',
-  title_tag          :'this should appear in the title tag',
+  robots   :'noindex, nofollow',
+  title    :'test of the title',
+  title_tag:'this should appear in the title tag'
+
   /*
   canonical          :'https://home.com/description',
   meta_description   :'This is the meta description. 170 chars.',
@@ -43,75 +43,74 @@ const mainHeadingProps = {
   //style,
   //children, //appended at bottom
 
-  subtitle        :'Stanley Kubrick, 1960',
+  subtitle:<FormattedMessage {...messages.shop_contact_subtitle} />,
   //subtitleClassName,
   //subtitleProps:{},
 
-  heading         :'Spartacus',
+  heading         :<FormattedMessage {...messages.shop_contact_title} />,
   headingClassName:'ts-green',
   headingAs       :'h1',
   //headingProps :{}
 
-  label           :'Film',
-  labelClassName  :'x-red basic',
+  label         :<FormattedMessage {...messages.shop_contact_label} />,
+  labelClassName:'x-red basic'
   //labelAs:'p',
   //labelProps :{}
 }
 
 /**
  * Page `ShopContact`
- * Description : 
+ * Description :
  */
 const ShopContact = ({
   history,
   location,
   match
-}) => {
-  
-  
-  return (
-    <Page id={ baseId }
-      itemType='https://schema.org/FAQPage'
-      HELMET={ helmet }
+}) => (
+  <Page
+    id={baseId}
+    itemType="https://schema.org/FAQPage"
+    HELMET={helmet}
+  >
+    <Page.Section
+      head
+      className="p-u u2"
+      id="head"
     >
-      <Page.Section
-        head
-        className='p-u u2'
-        id='head'
-      >
     
-        <Heading { ...mainHeadingProps} />
-      </Page.Section>
-      <Page.Section
-        id='a1'
-        className='p-u u2'
-      >
-        <h2>Section A2</h2>
-        <p>Some content here. Blah blah</p>
+      <Heading {...mainHeadingProps} />
+    </Page.Section>
+    <Page.Section
+      id="a1"
+      className="p-u u2"
+    >
+      <h2>Section A2</h2>
+      <p>Some content here. Blah blah</p>
     
-      </Page.Section>
-      <Page.Section
-        id='a2'
-        className='p-u u2'
-      >
-        <h2>Section A2</h2>
-        <p>Some content here. Blah blah</p>
+    </Page.Section>
+    <Page.Section
+      id="a2"
+      className="p-u u2"
+    >
+      <h2>Section A2</h2>
+      <p>Some content here. Blah blah</p>
     
-      </Page.Section>
-    </Page>
-)}
+    </Page.Section>
+  </Page>
+)
 
 ShopContact.propTypes = {
+
   /**
-   * 
+   *
    */
-  someprop: PropTypes.node,
+  someprop:PropTypes.node
 
   /*
   as: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
-  ]), 
+  ]),
   : PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -125,7 +124,7 @@ ShopContact.propTypes = {
 }
 
 /*
-ShopContact.defaultProps = { 
+ShopContact.defaultProps = {
   status: 'neutral',
 }
 */
