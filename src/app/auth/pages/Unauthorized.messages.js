@@ -2,16 +2,6 @@
 import { defineMessages } from 'react-intl'
 
 const messages = defineMessages({
-  loginTitle:{
-    id            :'app.auth.pages.login.title',
-    defaultMessage:'Dashboard Access',
-    description   :'Dashboard Login Page Title'
-  },
-  loginSubtitle:{
-    id            :'app.auth.pages.login.subtitle',
-    defaultMessage:'Login below to your dashboard account',
-    description   :'Subtitle for the login page'
-  },
   unauthorizedTitle:{
     id            :'app.auth.pages.unauthorized.title',
     defaultMessage:'Unauthorized',
@@ -36,6 +26,11 @@ const messages = defineMessages({
     id            :'app.auth.pages.unauthorized.here',
     defaultMessage:'here',
     description   :'Link to the login page'
+  },
+  error:{
+    id            :'app.auth.pages.unauthorized.error',
+    defaultMessage:'Error',
+    description   :''
   }
 })
 

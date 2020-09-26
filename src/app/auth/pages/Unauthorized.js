@@ -10,7 +10,7 @@ import {
 } from '@fwrlines/ds'
 
 import { FormattedMessage } from 'react-intl'
-import messages from './messages'
+import messages from './Unauthorized.messages'
 
 import { Link } from 'react-router-dom'
 //Config
@@ -55,7 +55,7 @@ const mainHeadingProps = {
   headingAs:'h1',
   //headingProps :{}
 
-  label         :'Error',
+  label         :<FormattedMessage {...messages.error} />,
   labelClassName:'x-red basic'
   //labelAs:'p',
   //labelProps :{}

@@ -1,5 +1,13 @@
 [
   {
+    "id": "app.auth.component.redeemer.loggingin",
+    "defaultMessage": "Logging in"
+  },
+  {
+    "id": "app.auth.component.redeemer.redirect_to",
+    "defaultMessage": "Will redirect to"
+  },
+  {
     "id": "app.auth.pages.login.subtitle",
     "description": "Subtitle for the login page",
     "defaultMessage": "Login below to your dashboard account"
@@ -13,6 +21,14 @@
     "id": "app.auth.pages.unauthorized.contact",
     "description": "Contact support when theres a login problem",
     "defaultMessage": "you can contact support here."
+  },
+  {
+    "id": "app.auth.pages.unauthorized.error",
+    "defaultMessage": "Error"
+  },
+  {
+    "id": "app.auth.pages.unauthorized.errore",
+    "defaultMessage": "Errore"
   },
   {
     "id": "app.auth.pages.unauthorized.explanation",

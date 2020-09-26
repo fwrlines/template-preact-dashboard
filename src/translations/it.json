@@ -49,5 +49,9 @@
   "ds.collections.saas.plan.price.monthly": "",
   "ds.form.input_label.optional": "",
   "ds.collections.blog.article_card.cta": "",
-  "app.auth.pages.unauthorized.here": ""
+  "app.auth.pages.unauthorized.here": "qui",
+  "app.auth.component.redeemer.loggingin": "Accesso in corso",
+  "app.auth.component.redeemer.redirect_to": "Riconduce a",
+  "app.auth.pages.unauthorized.error": "Errore",
+  "app.auth.pages.unauthorized.errore": ""
 }

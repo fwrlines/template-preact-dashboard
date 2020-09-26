@@ -9,7 +9,7 @@ import { LoginButton } from '../components'
 import { useHistory } from 'react-router-dom'
 
 import { FormattedMessage } from 'react-intl'
-import messages from './messages'
+import messages from './Login.messages'
 
 import Loading from 'app/Loading'
 
@@ -64,10 +64,10 @@ const Login = ({
   //someprop
 }) => {
 
-  const { 
+  const {
     currentUserData,
-    currentUserLoading, 
-    isConnected, 
+    currentUserLoading,
+    isConnected,
     dashboardHomePath
   } = useContext(SessionContext)
 
@@ -80,9 +80,8 @@ const Login = ({
   [history, dashboardHomePath, isConnected]
   )
 
-  if(currentUserLoading || currentUserData) return (
-    <Loading color='green'>
-    </Loading>
+  if (currentUserLoading || currentUserData) return (
+    <Loading color="green" />
   )
 
   return (
