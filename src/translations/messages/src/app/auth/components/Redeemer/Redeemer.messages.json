@@ -1,0 +1,10 @@
+[
+  {
+    "id": "app.auth.components.redeemer.loggingin",
+    "defaultMessage": "Logging in"
+  },
+  {
+    "id": "app.auth.components.redeemer.redirect_to",
+    "defaultMessage": "Will redirect to"
+  }
+]

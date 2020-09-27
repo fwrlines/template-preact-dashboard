@@ -15,6 +15,9 @@ import { Heading, InlineLoader, SessionContext } from '@fwrlines/ds'
 
 import { RedirectAfterLoginUrl, RedirectUnauthorized } from '../../urls'
 
+import { FormattedMessage } from 'react-intl'
+import messages from './Redeemer.messages'
+
 /**
  * Use `Redeemer` to exchange an authorization code for a login token
  *
@@ -105,7 +108,7 @@ const Redeemer = (props) => {
     >
       <Heading
         headingAs="h1"
-        heading="Logging in"
+        heading={<FormattedMessage {...messages.loggingin} />}
         subtitle={`${code}`}
       />
       <div className="pv-u">
@@ -118,7 +121,7 @@ const Redeemer = (props) => {
       </div>
       <div>
         <p className="x-subtitle c-x">
-          Will redirect to
+          {<FormattedMessage {...messages.redirect_to} />}
           {' '}
           <code className="c-x">{ RedirectAfterLoginUrl }</code>
         </p>

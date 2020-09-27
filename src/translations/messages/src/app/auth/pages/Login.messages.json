@@ -1,0 +1,12 @@
+[
+  {
+    "id": "app.auth.pages.login.title",
+    "description": "Dashboard Login Page Title",
+    "defaultMessage": "Dashboard Access"
+  },
+  {
+    "id": "app.auth.pages.login.subtitle",
+    "description": "Subtitle for the login page",
+    "defaultMessage": "Login below to your dashboard account"
+  }
+]

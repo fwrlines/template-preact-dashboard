@@ -57,5 +57,9 @@
   "ds.collections.saas.plan.price.monthly": "/month",
   "ds.form.input_label.optional": "Optional",
   "ds.collections.blog.article_card.cta": "Read more",
-  "app.auth.pages.unauthorized.here": "here"
+  "app.auth.pages.unauthorized.here": "here",
+  "app.auth.components.redeemer.loggingin": "Logging in",
+  "app.auth.components.redeemer.redirect_to": "Will redirect to",
+  "app.auth.pages.unauthorized.errore": "Errore",
+  "app.auth.pages.unauthorized.error": "Error"
 }
