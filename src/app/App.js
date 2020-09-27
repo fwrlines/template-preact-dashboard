@@ -41,7 +41,7 @@ const App = () => {
     >
       <SwitchRouteMap
         routes={routes}
-        NotFound={<Redirect to={loginPath} />}
+        NotFound={() => <Redirect to={loginPath} />}
       />
     </div>
   )
